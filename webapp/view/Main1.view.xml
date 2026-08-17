@@ -25,6 +25,7 @@
                         <contentRight>
                             <Button id="IDGenButton1" text="{i18n>logout}" icon="sap-icon://log" class="myCustomSize" tooltip="{i18n>logout}" type="Success" press=".handleLogoutPress"/>
                         </contentRight>
+                    
                     </Bar>
                 </customHeader>
                 <content>
@@ -87,7 +88,7 @@
                     </layout:VerticalLayout>
 
                     <HBox id="_IDGenHBox1" width="100%" alignItems="Start" class="sapUiContentPadding sapUiMargin sapUiResponsiveMargin" wrap="Wrap">
-                        <f:Card id="idPieCard" width="640px" class=" sapUiContentPadding sapUiMargin sapUiResponsiveMargin dashboardCard">
+                        <f:Card id="idPieCard" width="641px" class=" sapUiContentPadding sapUiMargin sapUiResponsiveMargin dashboardCard">
                             <f:header>
                                 <cards:Header id="pieHeader" title="{i18n>tileHeader3}" iconSrc="sap-icon://manager" subtitle="Last Updated: {chart>/items/0/LastUpdated}"/>
                             </f:header>
