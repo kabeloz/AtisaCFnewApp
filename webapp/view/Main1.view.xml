@@ -1,0 +1,221 @@
+<mvc:View xmlns:chart="sap.fe.macros.chart"
+    xmlns:widgets="sap.ui.integration.widgets" controllerName="cf.app.controller.Main1"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns:layout="sap.ui.layout"
+    xmlns:viz="sap.viz.ui5.controls"
+    xmlns:core="sap.ui.core"
+    xmlns:l="sap.suite.ui.commons"
+    xmlns:mc="sap.suite.ui.microchart"
+    xmlns:viz.data="sap.viz.ui5.data"
+    xmlns:viz.feeds="sap.viz.ui5.controls.common.feeds" height="100%"
+    xmlns:f="sap.f"
+    xmlns:cards="sap.f.cards"
+    xmlns="sap.m">
+    <SplitContainer id="IDSplitContainer" initialDetail="page" initialMaster="master" class="compactSplitContainer" >
+        <detailPages >
+            <Page id="page" >
+                <customHeader >
+                    <Bar id="IDGenBar1" class="professionalHeader">
+                        <contentLeft>
+                            <VBox id="_IDGenVBox2">
+                                <Text id="IDGenText01" text="Compensation Fund Management Dashbord"  class="dashboardHeaderText sapUiResponsiveMargin "/>
+                            </VBox>
+                        </contentLeft>
+
+                        <contentRight>
+                            <Button id="IDGenButton1" text="{i18n>logout}" icon="sap-icon://log" class="myCustomSize" tooltip="{i18n>logout}" type="Success" press=".handleLogoutPress"/>
+                        </contentRight>
+                    </Bar>
+                </customHeader>
+                <content>
+
+                    <layout:VerticalLayout id="_IDGenVerticalLayout1" class="sapUiContentPadding sapUiMargin sapUiResponsiveMargin" width="100%">
+                       <HBox id="_IDGenHBox3"
+                            width="100%"
+                            wrap="Wrap"
+                            class="sapUiSmallMarginEnd dashboardKpiContainer">
+
+                            <GenericTile
+                                id="tileThirdParty"
+                                class="sapUiSmallMarginEnd professionalKpiTile"
+                                press=".onThirdParty"
+                                tooltip=""
+                                header=" Third Party Users">
+
+                                <TileContent id="_IDGenTileContent" footer="Active Claims">
+                                    <NumericContent id="_IDGenNumericContent"
+                                        value="{dashboard>/ActiveClaims}"
+                                        icon="sap-icon://manager"
+                                        valueColor="Critical"
+                                        indicator="Up"/>
+                                </TileContent>
+                            </GenericTile>
+
+                            <GenericTile
+                                id="tilePayments"
+                                class="sapUiSmallMarginEnd professionalKpiTile"
+                                press=".onPayments"
+                                tooltip=""
+                                header="Individual Claims">
+
+                                <TileContent id="_IDGenTileContent1" footer="Total Claims">
+                                    <NumericContent id="_IDGenNumericContent1"
+                                        value="{dashboard>/IndividualClaims}"
+                                        icon="sap-icon://add-employee"
+                                        valueColor="Good"
+                                        indicator="None"/>
+                                </TileContent>
+                            </GenericTile>
+
+                            <GenericTile
+                                id="tileReports"
+                                class=" sapUiSmallMarginEnd professionalKpiTile"
+                                press=".onRegisterdPractices"
+                                tooltip=""
+                                header="Registered Practices">
+
+                                <TileContent id="_IDGenTileContent2" footer="Total Registered Practices">
+                                    <NumericContent id="_IDGenNumericContent2"
+                                        value="{practice>/TotalPractices}"
+                                        icon="sap-icon://customer-briefing"
+                                        valueColor="Good"
+                                        indicator="None"/>
+                                </TileContent>
+                            </GenericTile>
+
+                        </HBox>
+                    </layout:VerticalLayout>
+
+                    <HBox id="_IDGenHBox1" width="100%" alignItems="Start" class="sapUiContentPadding sapUiMargin sapUiResponsiveMargin" wrap="Wrap">
+                        <f:Card id="idPieCard" width="640px" class=" sapUiContentPadding sapUiMargin sapUiResponsiveMargin dashboardCard">
+                            <f:header>
+                                <cards:Header id="pieHeader" title="{i18n>tileHeader3}" iconSrc="sap-icon://manager" subtitle="Last Updated: {chart>/items/0/LastUpdated}"/>
+                            </f:header>
+                            <f:content>
+
+                                <viz:VizFrame id="pieChart1" vizType="pie" width="100%" height="290px" selectData=".onPieSelect" uiConfig="{applicationSet:'fiori'}">
+                                    <viz:dataset>
+                                        <viz.data:FlattenedDataset id="_IDGenFlattenedDataset" data="{chart>/items}">
+                                            <viz.data:dimensions>
+                                                <viz.data:DimensionDefinition id="_IDGenDimensionDefinition" name="Category" value="{chart>Category}"/>
+                                            </viz.data:dimensions>
+                                            <viz.data:measures>
+                                                <viz.data:MeasureDefinition id="_IDGenMeasureDefinition" name="ClaimCount" value="{chart>ClaimCount}"/>
+                                            </viz.data:measures>
+                                        </viz.data:FlattenedDataset>
+                                    </viz:dataset>
+                                    <viz:feeds>
+                                        <viz.feeds:FeedItem id="_IDGenFeedItem" uid="size" type="Measure" values="ClaimCount"/>
+                                        <viz.feeds:FeedItem id="_IDGenFeedItem1" uid="color" type="Dimension" values="Category"/>
+                                    </viz:feeds>
+                                </viz:VizFrame>
+                            </f:content>
+                        </f:Card>
+
+
+                        <f:Card id="_IDGenCard8" width="690px" class="sapUiContentPadding sapUiMargin sapUiResponsiveMargin dashboardCard">
+                            <f:header >
+                                <cards:Header id="_IDGenHeader" title="Individual Claims" iconSrc="sap-icon://add-employee" subtitle="Current claim status"/>
+                            </f:header>
+                            <f:content>
+                                <viz:VizFrame id="summaryBarChart" vizType="column" selectData=".BarChartSelect" width="100%" height="290px" uiConfig="{applicationSet:'fiori'}">
+                                    <viz:dataset>
+                                        <viz.data:FlattenedDataset id="_IDGenFlattenedDataset1" data="{summary>/items}">
+                                            <viz.data:dimensions>
+                                                <viz.data:DimensionDefinition id="_IDGenDimensionDefinition1" name="Category" value="{summary>Category}"/>
+                                                <viz.data:DimensionDefinition id="_IDGenDimensionDefinition2" name="Color" value="{summary>Category}"/>
+                                            </viz.data:dimensions>
+                                            <viz.data:measures>
+                                                <viz.data:MeasureDefinition id="_IDGenMeasureDefinition1" name="Value" value="{summary>Value}"/>
+                                            </viz.data:measures>
+                                        </viz.data:FlattenedDataset>
+                                    </viz:dataset>
+                                    <viz:feeds>
+                                        <viz.feeds:FeedItem id="_IDGenFeedItem2" uid="valueAxis" type="Measure" values="Value"/>
+                                        <viz.feeds:FeedItem id="_IDGenFeedItem3" uid="categoryAxis" type="Dimension" values="Category"/>
+                                        <viz.feeds:FeedItem id="_IDGenFeedItem4" uid="color" type="Dimension" values="Color"/>
+                                    </viz:feeds>
+                                </viz:VizFrame>
+                            </f:content>
+                        </f:Card>
+
+                        <f:Card id="_IDGenCard" width="680px" class=" sapUiContentPadding sapUiMargin sapUiResponsiveMargin dashboardCard">
+                            <f:header>
+                                <cards:Header id="_IDGenHeader1" iconSrc="sap-icon://customer-briefing" title="Registered Practices" subtitle="Distribution by practice category" />
+                            </f:header>
+                            <f:content>
+                                <viz:VizFrame id="idVizFrame" vizType="line" uiConfig="{applicationSet:'fiori'}" width="100%" height="300px">
+
+                                    <viz:dataset>
+                                        <viz.data:FlattenedDataset id="_IDGenFlattenedDataset3" data="{practice>/items}">
+                                            <viz.data:dimensions>
+                                                <viz.data:DimensionDefinition id="_IDGenDimensionDefinition3" name="Practice" value="{practice>Practice}" />
+                                                <viz.data:DimensionDefinition id="_IDGenDimensionDefinition4" name="Color" value="{practice>Color}" />
+                                            </viz.data:dimensions>
+
+                                            <viz.data:measures>
+                                                <viz.data:MeasureDefinition id="_IDGenMeasureDefinition2" name="Quantity" value="{practice>Quantity}" />
+                                            </viz.data:measures>
+                                        </viz.data:FlattenedDataset>
+                                    </viz:dataset>
+
+                                    <viz:feeds>
+                                        <viz.feeds:FeedItem id="_IDGenFeedItem5" uid="valueAxis" type="Measure" values="Quantity"/>
+                                        <viz.feeds:FeedItem id="_IDGenFeedItem6" uid="categoryAxis" type="Dimension" values="Practice"/>
+                                        <viz.feeds:FeedItem id="_IDGenFeedItem7" uid="color" type="Dimension" values="Color"/>
+                                    </viz:feeds>
+                                    <viz:dependents>
+                                        <viz:Popover id="idPopOver"/>
+                                    </viz:dependents>
+                                </viz:VizFrame>
+                            </f:content>
+                        </f:Card>
+
+                    </HBox>
+                </content>
+            </Page>
+        </detailPages>
+        <masterPages >
+            <Page id="master" class="sapUiStdPage masterGreenPage " showHeader="true">
+                <customHeader>
+                    <Toolbar id="_IDGenToolbar1" class="logoToolbar">
+                        <content>
+                            <Image id="_IDGenImage" src="images/CF_Logo.png" width="210px" height="120px" backgroundRepeat="no-repeat" densityAware="true" class="sidebarLogo"/>
+                        </content>
+                    </Toolbar>
+                </customHeader>
+                <content >
+                    <List id="myList1" class="professionalSideNav" itemPress=".onItemPress" mode="SingleSelectMaster" showSeparators="None">
+                        <items >
+                            <StandardListItem id="onListItem000" title="{i18n>item1Dash}" type="Navigation" icon="sap-icon://bbyd-dashboard" class="sideNavItem">
+                                <customData>
+                                    <core:CustomData key="route" value="RouteMain1"/>
+                                </customData>
+                            </StandardListItem>
+                            <StandardListItem id="onListItem001" title="{i18n>item1Dash1}" type="Navigation" icon="sap-icon://manager" class="sideNavItem">
+                                <customData>
+                                    <core:CustomData key="route" value="RouteMain2"/>
+                                </customData>
+                            </StandardListItem>
+                            <StandardListItem id="onListItem002" title="{i18n>item1Dash2}" type="Navigation" icon="sap-icon://add-employee" class="sideNavItem">
+                                <customData>
+                                    <core:CustomData key="route" value="RouteMain3"/>
+                                </customData>
+                            </StandardListItem>
+                            <StandardListItem id="onListItem003" title="{i18n>item1Dash3}" type="Navigation" icon="sap-icon://account" class="sideNavItem">
+                                <customData>
+                                    <core:CustomData key="route" value="RouteMain4"/>
+                                </customData>
+                            </StandardListItem>
+                            <StandardListItem id="onListItem004" title="{i18n>item1Dash4}" type="Navigation" icon="sap-icon://customer" class="sideNavItem">
+                                <customData>
+                                    <core:CustomData key="route" value="RouteMain5"/>
+                                </customData>
+                            </StandardListItem>
+                        </items>
+                    </List>
+                </content>
+            </Page>
+        </masterPages>
+    </SplitContainer>
+</mvc:View>

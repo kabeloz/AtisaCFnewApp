@@ -1,0 +1,44 @@
+<core:FragmentDefinition
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core">
+
+    <Dialog
+        id="loadingDialog"
+        showHeader="false"
+        contentWidth="320px"
+        contentHeight="180px"
+        horizontalScrolling="false"
+        verticalScrolling="false"
+        class="professionalLoadingDialog">
+
+        <content>
+            <VBox id="_IDGenVBox1"
+                width="100%"
+                height="100%"
+                justifyContent="Center"
+                alignItems="Center"
+                class="loadingContainer">
+
+                <BusyIndicator
+                    id="loadingIndicator"
+                    size="3.5rem"
+                    class="loadingSpinner"/>
+
+                <Title
+                    id="loadingTitle"
+                    text="Please wait"
+                    level="H4"
+                    class="loadingTitle"/>
+
+                <Text
+                    id="loadingText"
+                    text="Loading information..."
+                    textAlign="Center"
+                    class="loadingMessage"/>
+
+            </VBox>
+        </content>
+
+    </Dialog>
+
+</core:FragmentDefinition>

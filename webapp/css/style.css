@@ -1,0 +1,349 @@
+
+.myCustomText{
+    display: inline-block;
+    color: white;
+}
+.myTextColor{
+    display: inline-block;
+    color: rgba(4, 99, 163, 0.897);
+}
+.masterGreenPage {
+    background-color: #0c8510 !important;
+}
+
+.masterGreenPage .sapMPage {
+    background-color:#0c8510 !important;
+}
+.myCustomSize{
+    font-size: 30px;
+    color: #0c8510 !important;
+    
+}
+.myCustomSize1{
+    font-size: 20px;
+    
+}
+#IDGenBar1 {
+    height: 220px !important;
+}
+.myCustomBar {
+    background-color: #f2f2f2 !important;
+    border-bottom: 1px solid #d9d9d9;
+}
+.sapSuiteGT {
+    width: 320px;
+    height: 260px;
+}
+
+.sapVizFrame {
+    border-radius: 10px;
+}
+.largeTile{
+    width:80%; 
+    height:20rem !important; 
+}
+
+.largeTile .sapMGT{
+    width:50%;
+    height:20rem !important;
+}
+
+.largeTile .sapMTileCnt{
+    height:20rem !important;
+}
+.largeTile .sapMTileCntContent{
+    height:18rem !important;
+   
+}
+.myImageToolbar {
+    height: 70px !important;
+    min-height: 70px !important;
+}
+.smallTile {
+    width: 180px !important;
+    height: 100px !important;
+}
+.dashboardPage {
+    background-color: #b9bbbd;
+}
+.dashboardContent {
+    background-color: #c6c7c9;
+    min-height: 100%;
+    padding: 1rem;
+}.centerProfile{
+    width: 650px;
+    margin:auto
+}
+.hoverVBox {
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.hoverVBox:hover {
+    background-color: #f5f7fa;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    transform: translateY(-3px);
+}
+.dashboardTile{
+    border-radius:14px;
+    box-shadow:0 4px 12px rgba(0,0,0,.15);
+    transition:all .25s ease;
+    cursor:pointer;
+}
+
+.dashboardTile:hover{
+    transform:translateY(-4px);
+    box-shadow:0 10px 24px rgba(0,0,0,.20);
+}
+.logoToolbar {
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    justify-content: center !important;
+}
+
+.sidebarLogo {
+    object-fit: contain;
+    margin: 10px auto 5px auto;
+    opacity: 0.96;
+}/* =========================================
+   SIDEBAR
+   ========================================= */
+
+.professionalSideNav {
+    background: transparent !important;
+    border: none !important;
+    padding: 10px 8px;
+}
+
+/* =========================================
+   MENU ITEMS
+   ========================================= */
+
+.professionalSideNav .sideNavItem {
+    background: transparent !important;
+    border: none !important;
+    border-radius: 8px;
+    margin: 4px 0;
+    min-height: 48px;
+    transition: all 0.2s ease;
+}
+
+/* =========================================
+   MENU TEXT
+   ========================================= */
+
+.professionalSideNav .sideNavItem .sapMSLITitleOnly,
+.professionalSideNav .sideNavItem .sapMSLITitle {
+    font-size: 14px !important;
+    font-weight: 500 !important;
+    color: #ffffff !important;
+}
+
+/* =========================================
+   MENU ICONS - WHITE
+   ========================================= */
+
+.professionalSideNav .sideNavItem .sapMSLIIcon,
+.professionalSideNav .sideNavItem .sapMSLIIcon .sapUiIcon,
+.professionalSideNav .sideNavItem .sapMSLIIcon.sapUiIcon {
+    color: #ffffff !important;
+    opacity: 1 !important;
+    font-size: 1.2rem !important;
+    margin-right: 12px;
+}
+
+/* =========================================
+   SIDEBAR ICONS + NAVIGATION ARROWS
+   ========================================= */
+
+.professionalSideNav .sideNavItem .sapUiIcon {
+    color: #ffffff !important;
+    opacity: 1 !important;
+}
+
+/* Left icons */
+.professionalSideNav .sideNavItem .sapMSLIImgIcon,
+.professionalSideNav .sideNavItem .sapMSLIIcon {
+    /* color: #f3f709 !important;
+     */
+     color: #fbb800 !important;
+    opacity: 1 !important;
+}
+
+/* Right navigation arrow */
+.professionalSideNav .sideNavItem .sapMLIBType {
+    color: #ffffff !important;
+}
+
+.professionalSideNav .sideNavItem .sapMLIBType .sapUiIcon {
+    color: #ffffff !important;
+}
+
+
+/* =========================================
+   HOVER
+   ========================================= */
+
+.professionalSideNav .sideNavItem:hover {
+    background: rgba(255, 255, 255, 0.10) !important;
+    transform: translateX(3px);
+}
+
+
+/* =========================================
+   SELECTED ITEM
+   ========================================= */
+
+.professionalSideNav .sapMLIBSelected {
+    background: rgba(255, 255, 255, 0.16) !important;
+    border-left: 4px solid #ffffff !important;
+    border-radius: 0 8px 8px 0;
+}
+
+
+/* Selected text */
+.professionalSideNav .sapMLIBSelected .sapMSLITitleOnly,
+.professionalSideNav .sapMLIBSelected .sapMSLITitle {
+    color: #ffffff !important;
+    font-weight: 600 !important;
+}
+
+
+/* Selected icon */
+.professionalSideNav .sideNavItem.sapMLIBSelected .sapMSLIIcon,
+.professionalSideNav .sideNavItem.sapMLIBSelected .sapMSLIIcon .sapUiIcon {
+   color: #FB8C00 !important;
+    opacity: 1 !important;
+}
+
+
+/* Selected navigation arrow */
+.professionalSideNav .sapMLIBSelected .sapMLIBType,
+.professionalSideNav .sapMLIBSelected .sapMLIBType .sapUiIcon {
+    color: #ffffff !important;
+    opacity: 1 !important;
+}
+
+/* Professional Loading Dialog */
+.professionalLoadingDialog {
+    border-radius: 16px !important;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.25) !important;
+}
+
+.professionalLoadingDialog .sapMDialogScrollCont {
+    padding: 0 !important;
+}
+
+.loadingContainer {
+    padding: 25px;
+    box-sizing: border-box;
+}
+
+.loadingSpinner {
+    margin-bottom: 18px;
+}
+
+.loadingTitle {
+    font-size: 18px !important;
+    font-weight: 600 !important;
+    margin-bottom: 6px;
+}
+
+.loadingMessage {
+    font-size: 14px !important;
+    opacity: 0.7;
+}
+
+
+/* Professional Logout Button */
+.professionalLogoutButton {
+    border-radius: 8px !important;
+    margin-right: 12px !important;
+    padding: 0 12px !important;
+    transition: all 0.2s ease;
+}
+
+/* Logout icon */
+.professionalLogoutButton .sapUiIcon {
+    color: #c62828 !important;
+    font-size: 1.1rem !important;
+}
+
+/* Logout text */
+.professionalLogoutButton .sapMBtnContent {
+    color: #444444 !important;
+    font-weight: 600 !important;
+}
+
+/* Hover */
+.professionalLogoutButton:hover {
+    background-color: rgba(198, 40, 40, 0.08) !important;
+    transform: translateY(-1px);
+}
+
+/* Pressed */
+.professionalLogoutButton:active {
+    background-color: rgba(198, 40, 40, 0.15) !important;
+}
+
+/* Professional Header */
+.professionalHeaderContent {
+    padding-left: 18px;
+    justify-content: center;
+}
+
+.professionalHeaderTitle {
+    font-size: 22px !important;
+    font-weight: 600 !important;
+    color: #1f2933 !important;
+    line-height: 1.2;
+}
+
+.professionalHeaderSubtitle {
+    font-size: 13px !important;
+    color: #6b7280 !important;
+    margin-top: 3px;
+}
+
+/* =========================================
+   SELECTED STANDARD LIST ITEM - ICON ONLY
+   ========================================= */
+
+.professionalSideNav .sapMLIBSelected .sapMSLIImgIcon,
+.professionalSideNav .sapMLIBSelected .sapMSLIImgIcon.sapUiIcon,
+.professionalSideNav .sapMLIBSelected .sapMSLIIcon,
+.professionalSideNav .sapMLIBSelected .sapMSLIIcon.sapUiIcon {
+    color: #fbb800 !important;
+    opacity: 1 !important;
+}
+
+/*=========================================
+Dashborad adapts */
+.dashboardCard {
+    width: 48%;
+    min-width: 420px;
+    margin-bottom: 1rem;
+}
+
+@media (max-width: 900px) {
+    .dashboardCard {
+        width: 100%;
+        min-width: 0;
+    }
+}
+
+.compactSplitContainer .sapMSplitContainerMaster {
+    width: 260px !important;
+    min-width: 260px !important;
+    max-width: 260px !important;
+}
+
+.dashboardHeaderText {
+    font-weight: 700 !important;
+    text-decoration: burlywood;
+    font-size: 2.2rem !important;
+    letter-spacing: 0.3px;
+    color: #0c8510 !important;
+}

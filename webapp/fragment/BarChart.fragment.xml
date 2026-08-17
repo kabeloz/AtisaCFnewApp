@@ -1,0 +1,310 @@
+<core:FragmentDefinition xmlns="sap.m"
+    xmlns:core="sap.ui.core">
+
+    <Dialog id="BarChart" title="{details>/Category}" contentWidth="650px" contentHeight="auto">
+
+        <content>
+
+            <VBox id="_IDGenVBox17" class="sapUiMediumMargin" width="100%">
+
+                <!-- HEADER -->
+                <VBox id="_IDGenVBox4" class="sapUiSmallMarginBottom">
+
+                    <Title id="_IDGenTitle12" text="{details>/Category}" level="H3"/>
+
+                    <Text id="_IDGenText7" text="{details>/Description}" class="sapUiTinyMarginTop"/>
+
+                    <ObjectStatus id="_IDGenObjectStatus1" text="{details>/Status}" state="Information" class="sapUiSmallMarginTop"/>
+
+                </VBox>
+
+
+                <!-- SUMMARY -->
+                <Panel id="_IDGenPanel" headerText="Claim Summary" expandable="false" class="sapUiSmallMarginBottom" visible="{parts: [{path: 'details>/Category'}], formatter: '.showClaimSection'}">
+
+                    <content>
+
+                        <HBox id="_IDGenHBox2" justifyContent="SpaceBetween" width="100%" wrap="Wrap">
+
+                            <VBox id="_IDGenVBox5" class="sapUiSmallMarginEnd">
+                                <Label id="_IDGenLabel21" text="Total Claims"/>
+                                <ObjectNumber id="_IDGenObjectNumber4" number="{details>/Value}" emphasized="true"/>
+                            </VBox>
+
+                            <VBox id="_IDGenVBox7" class="sapUiSmallMarginEnd">
+                                <Label id="_IDGenLabel22" text="Submitted"/>
+                                <ObjectNumber id="_IDGenObjectNumber5" number="{details>/Submitted}"/>
+                            </VBox>
+
+                            <VBox id="_IDGenVBox8" class="sapUiSmallMarginEnd">
+                                <Label id="_IDGenLabel23" text="Completed"/>
+                                <ObjectNumber id="_IDGenObjectNumber6" number="{details>/Completed}"/>
+                            </VBox>
+
+                            <VBox id="_IDGenVBox18">
+                                <Label id="_IDGenLabel24" text="Outstanding"/>
+                                <ObjectNumber id="_IDGenObjectNumber7" number="{details>/Outstanding}" state="Warning"/>
+                            </VBox>
+
+                        </HBox>
+
+                    </content>
+
+                </Panel>
+
+
+                <!-- CLAIM STATUS -->
+                <Panel id="_IDGenPanel1" headerText="Claim Status" expandable="false" class="sapUiSmallMarginBottom" visible="{parts: [{path: 'details>/Category'}], formatter: '.showClaimSection'}">
+
+                    <content>
+
+                        <HBox id="_IDGenHBox9" justifyContent="SpaceBetween" width="100%" wrap="Wrap">
+
+                            <VBox id="_IDGenVBox19" class="sapUiSmallMarginEnd">
+                                <Label id="_IDGenLabel25" text="Approved"/>
+                                <ObjectNumber id="_IDGenObjectNumber8" number="{details>/Approved}" state="Success"/>
+                            </VBox>
+
+                            <VBox id="_IDGenVBox20" class="sapUiSmallMarginEnd">
+                                <Label id="_IDGenLabel26" text="Rejected"/>
+                                <ObjectNumber id="_IDGenObjectNumber9" number="{details>/Rejected}" state="Error"/>
+                            </VBox>
+
+                            <VBox id="_IDGenVBox21" class="sapUiSmallMarginEnd">
+                                <Label id="_IDGenLabel27" text="In Progress"/>
+                                <ObjectNumber id="_IDGenObjectNumber10" number="{details>/Inprogress}" state="Warning"/>
+                            </VBox>
+
+                            <VBox id="_IDGenVBox23">
+                                <Label id="_IDGenLabel28" text="Pending"/>
+                                <ObjectNumber id="_IDGenObjectNumber11" number="{details>/Pending}" state="Information"/>
+                            </VBox>
+
+                        </HBox>
+
+                    </content>
+
+                </Panel>
+
+                <!-- Notification Summary -->
+                <Panel id="notificationSummaryPanel" headerText="Notification Summary" expandable="false" visible="{parts: [{path: 'details>/Category'}], formatter: '.showNotificationSection'}" class="sapUiSmallMarginBottom">
+
+                    <content>
+
+                        <HBox id="_IDGenHBox12" justifyContent="SpaceBetween" width="100%" wrap="Wrap">
+
+                            <VBox id="_IDGenVBox3" class="sapUiSmallMarginEnd">
+                                <Label id="_IDGenLabel36" text="Total"/>
+                                <ObjectNumber id="_IDGenObjectNumber19" number="{details>/Value}" emphasized="true"/>
+                            </VBox>
+
+                            <VBox id="_IDGenVBox31" class="sapUiSmallMarginEnd">
+                                <Label id="_IDGenLabel37" text="Read"/>
+                                <ObjectNumber id="_IDGenObjectNumber20" number="{details>/Read}" state="Success"/>
+                            </VBox>
+
+                            <VBox id="_IDGenVBox32" class="sapUiSmallMarginEnd">
+                                <Label id="_IDGenLabel38" text="Unread"/>
+                                <ObjectNumber id="_IDGenObjectNumber21" number="{details>/Unread}" state="Warning"/>
+                            </VBox>
+
+                            <VBox id="_IDGenVBox33">
+                                <Label id="_IDGenLabel39" text="Action Required"/>
+                                <ObjectNumber id="_IDGenObjectNumber22" number="{details>/ActionRequired}" state="Error"/>
+                            </VBox>
+
+                        </HBox>
+
+                    </content>
+
+                </Panel>
+
+                <!-- PRIORITY -->
+                <Panel id="_IDGenPanel2" headerText="Priority Breakdown" expandable="false" class="sapUiSmallMarginBottom" visible="{parts: [{path: 'details>/Category'}], formatter: '.showClaimSection'}">
+
+                    <content>
+
+                        <HBox id="_IDGenHBox10" justifyContent="SpaceBetween" width="100%" wrap="Wrap">
+
+                            <VBox id="_IDGenVBox24">
+                                <Label id="_IDGenLabel29" text="High Priority"/>
+                                <ObjectNumber id="_IDGenObjectNumber12" number="{details>/HighPriority}" state="Error"/>
+                            </VBox>
+
+                            <VBox id="_IDGenVBox25">
+                                <Label id="_IDGenLabel30" text="Medium Priority"/>
+                                <ObjectNumber id="_IDGenObjectNumber13" number="{details>/MediumPriority}" state="Warning"/>
+                            </VBox>
+
+                            <VBox id="_IDGenVBox26">
+                                <Label id="_IDGenLabel31" text="Low Priority"/>
+                                <ObjectNumber id="_IDGenObjectNumber14" number="{details>/LowPriority}" state="Success"/>
+                            </VBox>
+
+                        </HBox>
+
+                    </content>
+
+                </Panel>
+
+
+                <!-- FINANCIAL -->
+                <Panel id="_IDGenPanel3" headerText="Financial Overview" expandable="false" visible="{parts: [{path: 'details>/Category'}], formatter: '.showFinancialSection'}" class="sapUiSmallMarginBottom">
+
+                    <content>
+
+                        <ObjectAttribute id="_IDGenObjectAttribute" title="Total Amount Claimed" text="{details>/TotalAmountClaimed}"/>
+
+                        <ObjectAttribute id="_IDGenObjectAttribute4" title="Total Amount Approved" text="{details>/TotalAmountApproved}"/>
+
+                        <ObjectAttribute id="_IDGenObjectAttribute5" title="Total Amount Paid" text="{details>/TotalAmountPaid}"/>
+
+                        <ObjectAttribute id="_IDGenObjectAttribute6" title="Outstanding Amount" text="{details>/OutstandingAmount}"/>
+
+                    </content>
+
+                </Panel>
+
+                <!-- Medical Assessment -->
+                <Panel id="medicalAssessmentPanel" headerText="Medical Assessment" expandable="false" visible="{parts: [{path: 'details>/Category'}], formatter: '.showMedicalSection'}" class="sapUiSmallMarginBottom">
+
+                    <content>
+
+                        <HBox id="medicalAssessmentHBox" justifyContent="SpaceBetween" width="100%" wrap="Wrap">
+
+                            <VBox id="_IDGenVBox27" class="sapUiSmallMarginEnd">
+                                <Label id="_IDGenLabel32" text="Assessments"/>
+                                <ObjectNumber id="_IDGenObjectNumber15" number="{details>/MedicalAssessments}"/>
+                            </VBox>
+
+                            <VBox id="_IDGenVBox28" class="sapUiSmallMarginEnd">
+                                <Label id="_IDGenLabel33" text="Reports Received"/>
+                                <ObjectNumber id="_IDGenObjectNumber16" number="{details>/MedicalReportsReceived}" state="Success"/>
+                            </VBox>
+
+                            <VBox id="_IDGenVBox29" class="sapUiSmallMarginEnd">
+                                <Label id="_IDGenLabel34" text="Reports Outstanding"/>
+                                <ObjectNumber id="_IDGenObjectNumber17" number="{details>/MedicalReportsOutstanding}" state="Warning"/>
+                            </VBox>
+
+                            <VBox id="_IDGenVBox30">
+                                <Label id="_IDGenLabel35" text="Follow-Up Required"/>
+                                <ObjectNumber id="_IDGenObjectNumber18" number="{details>/FollowUpRequired}" state="Error"/>
+                            </VBox>
+
+                        </HBox>
+
+                    </content>
+
+                </Panel>
+
+                <!--Medical Outcome-->
+                <Panel id="medicalOutcomePanel" headerText="Medical Outcome" expandable="false" visible="{parts: [{path: 'details>/Category'}], formatter: '.showMedicalSection'}" class="sapUiSmallMarginBottom">
+
+                    <content>
+
+                        <ObjectAttribute id="_IDGenObjectAttribute16" title="Fit for Work" text="{details>/FitForWork}"/>
+
+                        <ObjectAttribute id="_IDGenObjectAttribute17" title="Temporarily Unfit" text="{details>/TemporarilyUnfit}"/>
+
+                        <ObjectAttribute id="_IDGenObjectAttribute18" title="Permanently Unfit" text="{details>/PermanentlyUnfit}"/>
+
+                        <ObjectAttribute id="_IDGenObjectAttribute19" title="Awaiting Medical Opinion" text="{details>/AwaitingMedicalOpinion}"/>
+
+                        <ObjectAttribute id="_IDGenObjectAttribute20" title="Specialist Referrals" text="{details>/SpecialistReferrals}"/>
+
+                        <ObjectAttribute id="_IDGenObjectAttribute21" title="Additional Tests Required" text="{details>/AdditionalTestsRequired}"/>
+
+                    </content>
+
+                </Panel>
+
+
+                <!-- PROCESSING -->
+                <Panel id="_IDGenPanel4" headerText="Processing Information" visible="{parts: [{path: 'details>/Category'}], formatter: '.showFinancialSection'}" expandable="false">
+
+                    <content>
+
+                        <ObjectAttribute id="_IDGenObjectAttribute7" title="Average Processing Time" text="{details>/AverageProcessingDays} days"/>
+
+                        <ObjectAttribute id="_IDGenObjectAttribute8" title="Oldest Claim" text="{details>/OldestClaimDays} days"/>
+
+                        <ObjectAttribute id="_IDGenObjectAttribute14" title="Last Updated" text="{details>/LastUpdated}"/>
+
+                    </content>
+
+                </Panel>
+                <!-- Notification Breakdown -->
+                <Panel id="notificationTypePanel" headerText="Notification Breakdown" expandable="false" visible="{parts: [{path: 'details>/Category'}], formatter: '.showNotificationSection'}" class="sapUiSmallMarginBottom">
+
+                    <content>
+
+                        <ObjectAttribute id="_IDGenObjectAttribute27" title="Important" text="{details>/Important}"/>
+
+                        <ObjectAttribute id="_IDGenObjectAttribute28" title="Action Required" text="{details>/ActionRequired}"/>
+
+                        <ObjectAttribute id="_IDGenObjectAttribute29" title="Information" text="{details>/Information}"/>
+
+                        <ObjectAttribute id="_IDGenObjectAttribute30" title="Pending Actions" text="{details>/PendingActions}"/>
+
+                        <ObjectAttribute id="_IDGenObjectAttribute31" title="Overdue Actions" text="{details>/OverdueActions}"/>
+
+                        <ObjectAttribute id="_IDGenObjectAttribute32" title="Upcoming Deadlines" text="{details>/UpcomingDeadlines}"/>
+
+                    </content>
+
+                </Panel>
+                <!-- Notification Activity -->
+                <Panel id="notificationProcessingPanel" headerText="Notification Activity" expandable="false" visible="{parts: [{path: 'details>/Category'}], formatter: '.showNotificationSection'}">
+
+                    <content>
+
+                        <ObjectAttribute id="_IDGenObjectAttribute33" title="Average Response Time" text="{details>/AverageResponseDays} days"/>
+
+                        <ObjectAttribute id="_IDGenObjectAttribute34" title="Oldest Notification" text="{details>/OldestNotificationDays} days"/>
+
+                        <ObjectAttribute id="_IDGenObjectAttribute35" title="Pending Actions" text="{details>/PendingActions}"/>
+
+                        <ObjectAttribute id="_IDGenObjectAttribute36" title="Overdue Actions" text="{details>/OverdueActions}"/>
+
+                        <ObjectAttribute id="_IDGenObjectAttribute37" title="Upcoming Deadlines" text="{details>/UpcomingDeadlines}"/>
+
+                        <ObjectAttribute id="_IDGenObjectAttribute38" title="Last Updated" text="{details>/LastUpdated}"/>
+
+                    </content>
+
+                </Panel>
+
+                <!-- Medical Processing -->
+                <Panel id="medicalProcessingPanel" headerText="Medical Processing" expandable="false" visible="{parts: [{path: 'details>/Category'}], formatter: '.showMedicalSection'}">
+
+                    <content>
+
+                        <ObjectAttribute id="_IDGenObjectAttribute22" title="Average Assessment Time" text="{details>/AverageAssessmentDays} days"/>
+
+                        <ObjectAttribute id="_IDGenObjectAttribute23" title="Oldest Assessment" text="{details>/OldestAssessmentDays} days"/>
+
+                        <ObjectAttribute id="_IDGenObjectAttribute24" title="Specialist Referrals" text="{details>/SpecialistReferrals}"/>
+
+                        <ObjectAttribute id="_IDGenObjectAttribute25" title="Additional Tests Required" text="{details>/AdditionalTestsRequired}"/>
+
+                        <ObjectAttribute id="_IDGenObjectAttribute26" title="Last Updated" text="{details>/LastUpdated}"/>
+
+                    </content>
+
+                </Panel>
+
+            </VBox>
+
+        </content>
+
+
+        <beginButton>
+
+            <Button id="_IDGenButton2" text="Close" type="Emphasized" icon="sap-icon://decline" press=".onBarChart"/>
+
+        </beginButton>
+
+    </Dialog>
+
+</core:FragmentDefinition>

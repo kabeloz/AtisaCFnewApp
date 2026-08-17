@@ -1,0 +1,240 @@
+<mvc:View xmlns:table="sap.ui.table"
+    xmlns:chart="sap.fe.macros.chart"
+    xmlns:uxap="sap.uxap"
+    xmlns:widgets="sap.ui.integration.widgets" controllerName="cf.app.controller.Main4"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns:layout="sap.ui.layout"
+    xmlns:core="sap.ui.core"
+    xmlns:viz="sap.viz.ui5.controls"
+    xmlns:rowmodes="sap.ui.table.rowmodes"
+    xmlns:l="sap.suite.ui.commons"
+    xmlns:mc="sap.suite.ui.microchart"
+    xmlns:viz.data="sap.viz.ui5.data"
+    xmlns:viz.feeds="sap.viz.ui5.controls.common.feeds" height="100%"
+    xmlns:f="sap.f"
+    xmlns:cards="sap.f.cards"
+    xmlns="sap.m">
+    <SplitContainer id="IDSplitContainer4" initialDetail="page" initialMaster="master" class="compactSplitContainer">
+        <detailPages>
+
+            <Page id="page4" showHeader="true" enableScrolling="false" title="Registered Practices MFP">
+                <customHeader >
+                    <Bar id="IDGenBar4" class="myCustomBar">
+                        <contentLeft>
+                            <Text id="IDGenText4" text="Registered Practices MFP Summary" class="myCustomSize sapUiResponsiveMargin"/>
+                        </contentLeft>
+                        <contentRight>
+                            <Button id="IDGenButton4" text="{i18n>logout}" visible="true" icon="sap-icon://log" type="Success" press=".handleLogoutPress"/>
+                        </contentRight>
+                    </Bar>
+                </customHeader>
+               
+                <content>
+                    
+                    <VBox id="_IDGenVBox44" width="100%"  height="100%" fitContainer="true" >
+                        <Title id="_IDGenTitle44" text="" level="H2"/>
+                        <Toolbar id="_IDGenToolbar44">
+                            <Title id="_IDGenTitle444" text="Individual Claims Information." class="myTextColor"/>
+                            <ToolbarSpacer id="_IDGenToolbarSpacer44"/>
+                            <SearchField id="_IDGenSearchField44" width="250px" liveChange=".onSearchEmployer" search=".onSearchEmployer" placeholder="Search Employer"/>
+                            <Button id="_IDGenButton44" icon="sap-icon://refresh" tooltip="Refresh"/>
+                            <Button id="_IDGenButton444" icon="sap-icon://excel-attachment" text="Export"/>
+                        </Toolbar>
+
+                        
+                        <!-- <table:Table id="_IDGenTable" rows="{thirdParty>/items}" width="100%" class="sapUiContentPadding " selectionMode="None" enableColumnReordering="true" enableSelectAll="false"  fixedColumnCount="1" rowActionCount="0" showNoData="true">
+                             <table:layoutData>
+                                <FlexItemData id="_IDGenFlexItemData" growFactor="1"/>
+                            </table:layoutData>
+
+                            <table:columns>
+                                <table:Column id="_IDGenColumn18" width="40px" hAlign="Left">
+                                    <Label id="_IDGenLabel20" text="No."/>
+                                    <table:template>
+                                        <Text id="_IDGenText17" text="{thirdParty>RowNumber}"/>
+                                    </table:template>
+                                </table:Column>
+
+                                <table:Column id="_IDGenColumn1" width="180px">
+                                    <Label id="_IDGenLabel3" text="Employer Name"  wrapping="true"/>
+                                    <table:template>
+                                        <Text id="_IDGenText1" text="{thirdParty>Employer_Name}"/>
+                                    </table:template>
+                                </table:Column>
+
+                                <table:Column id="_IDGenColumn2" width="120px">
+                                    <Label id="_IDGenLabel4" text="Registration No"/>
+                                    <table:template>
+                                        <Text id="_IDGenText2" text="{thirdParty>Registration_Number}"/>
+                                    </table:template>
+                                </table:Column>
+
+                                <table:Column id="_IDGenColumn3" width="120px">
+                                    <Label id="_IDGenLabel5" text="Province"/>
+                                    <table:template>
+                                        <Text id="_IDGenText3" text="{thirdParty>Province}"/>
+                                    </table:template>
+                                </table:Column>
+
+                                <table:Column id="_IDGenColumn17" width="140px">
+                                    <Label id="_IDGenLabel19" text="Last Login"  wrapping="true"/>
+                                    <table:template>
+                                        <Text id="_IDGenText16" text="{thirdParty>Last_Login}"/>
+                                    </table:template>
+                                </table:Column>
+
+                                <table:Column id="_IDGenColumn4" width="150px">
+                                    <Label id="_IDGenLabel6" text="Industry"/>
+                                    <table:template>
+                                        <Text id="_IDGenText5" text="{thirdParty>Industry}"/>
+                                    </table:template>
+                                </table:Column>
+
+                                <table:Column id="_IDGenColumn5" width="100px">
+                                    <Label id="_IDGenLabel7" text="Number Of Employees"  wrapping="true"/>
+                                    <table:template>
+                                        <ObjectNumber id="_IDGenObjectNumber" number="{thirdParty>Employees}"/>
+                                    </table:template>
+                                </table:Column>
+
+                                <table:Column id="_IDGenColumn6" width="110px">
+                                    <Label id="_IDGenLabel8" text="Active Claims"  wrapping="true"/>
+                                    <table:template>
+                                        <ObjectNumber id="_IDGenObjectNumber1" number="{thirdParty>Active_Claims}" state="Success"/>
+                                    </table:template>
+                                </table:Column>
+
+                                <table:Column id="_IDGenColumn7" width="110px">
+                                    <Label id="_IDGenLabel9" text="Total Pending"  wrapping="true"/>
+                                    <table:template>
+                                        <ObjectNumber id="_IDGenObjectNumber2" number="{thirdParty>Pending_Claims}" state="Warning"/>
+                                    </table:template>
+                                </table:Column>
+
+                                <table:Column id="_IDGenColumn8" width="130px">
+                                    <Label id="_IDGenLabel10" text="Total Payments"  wrapping="true"/>
+                                    <table:template>
+                                        <Text id="_IDGenText6" text="{thirdParty>Total_Payments}"/>
+                                    </table:template>
+                                </table:Column>
+
+                                <table:Column id="_IDGenColumn11" width="150px">
+                                    <Label id="_IDGenLabel12" text="Director"  wrapping="true"/>
+                                    <table:template>
+                                        <Text id="_IDGenText8" text="{thirdParty>Director_Name}"/>
+                                    </table:template>
+                                </table:Column>
+
+                                <table:Column id="_IDGenColumn16"  width="130px">
+                                    <Label id="_IDGenLabel18" text="Registered"  wrapping="true"/>
+                                    <table:template>
+                                        <Text id="_IDGenText15" text="{thirdParty>Company_Registration_Date}"/>
+                                    </table:template>
+                                </table:Column>
+
+                                <table:Column id="_IDGenColumn15"  width="120px">
+                                    <Label id="_IDGenLabel17" text="Submitted"  wrapping="true"/>
+                                    <table:template>
+                                        <Text id="_IDGenText14" text="{thirdParty>Submitted_Date}"/>
+                                    </table:template>
+                                </table:Column>
+
+                                <table:Column id="_IDGenColumn12" width="150px">
+                                    <Label id="_IDGenLabel14" text="Contact Person"  wrapping="true"/>
+                                    <table:template>
+                                        <Text id="_IDGenText9" text="{thirdParty>Contact_Person}"/>
+                                    </table:template>
+                                </table:Column>
+
+                                <table:Column id="_IDGenColumn14" width="140px">
+                                    <Label id="_IDGenLabel16" text="Closed Claims"  wrapping="true"/>
+                                    <table:template>
+                                        <ObjectNumber id="_IDGenObjectNumber3"
+                                            number="{thirdParty>Closed_Claims}"
+                                            state="Success"/>
+                                    </table:template>
+                                </table:Column>
+
+                                <table:Column id="_IDGenColumn13" width="200px">
+                                    <Label id="_IDGenLabel15" text="Email"  wrapping="true"/>
+                                    <table:template>
+                                        <Link id="_IDGenLink"
+                                            text="{thirdParty>Email}"
+                                            href="mailto:{thirdParty>Email}"/>
+                                    </table:template>
+                                </table:Column>
+
+                                <table:Column id="_IDGenColumn9" width="150px">
+                                    <Label id="_IDGenLabel11" text="Compliance Status"  wrapping="true"/>
+                                    <table:template>
+                                        <ObjectStatus id="_IDGenObjectStatus2" text="{thirdParty>Compliance_Status}" state="{=
+                                                ${thirdParty>Compliance_Status} === 'Compliant' ? 'Success' :
+                                                ${thirdParty>Compliance_Status} === 'Review Required' ? 'Warning' :
+                                                ${thirdParty>Compliance_Status} === 'Outstanding Documents' ? 'Error' :
+                                                'None'
+                                            }"/>
+                                    </table:template>
+                                </table:Column>
+
+                                <table:Column id="_IDGenColumn10" width="120px">
+                                    <Label id="_IDGenLabel13" text="Status"  wrapping="true"/>
+                                    <table:template>
+                                        <ObjectStatus id="_IDGenObjectStatus3" text="{thirdParty>Status}" state="{=
+                                                ${thirdParty>Status} === 'Active' ? 'Success' :
+                                                ${thirdParty>Status} === 'Pending' ? 'Warning' :
+                                                ${thirdParty>Status} === 'Inactive' ? 'Error' :
+                                                'None'
+                                            }"/>
+                                    </table:template>
+                                </table:Column>
+                            </table:columns>
+                        </table:Table> -->
+                    </VBox>
+                </content>
+
+            </Page>
+        </detailPages>
+        <masterPages >
+            <Page id="master444" class="sapUiStdPage masterGreenPage " showHeader="true">
+                <customHeader>
+                    <Toolbar id="_IDGenToolbar444" class="logoToolbar">
+                        <content>
+                            <Image id="_IDGenImage444" src="images/CF_Logo.png" width="210px" height="120px" backgroundRepeat="no-repeat" densityAware="true" class="sidebarLogo"/>
+                        </content>
+                    </Toolbar>
+                </customHeader>
+                <content >
+                    <List id="myList44" class="professionalSideNav" itemPress=".onItemPress" mode="SingleSelectMaster" showSeparators="None">
+                        <items >
+                            <StandardListItem id="onListItem444" title="{i18n>item1Dash}" type="Navigation" icon="sap-icon://bbyd-dashboard" class="sideNavItem">
+                                <customData>
+                                    <core:CustomData id="_IDGenCustomData444" key="route" value="RouteMain1"/>
+                                </customData>
+                            </StandardListItem>
+                            <StandardListItem id="onListItem445" title="{i18n>item1Dash1}" type="Navigation" icon="sap-icon://manager" class="sideNavItem">
+                                 <customData>
+                                    <core:CustomData id="_IDGenCustomData445" key="route" value="RouteMain2"/>
+                                </customData>
+                            </StandardListItem>
+                            <StandardListItem id="onListItem446" title="{i18n>item1Dash2}" type="Navigation" icon="sap-icon://add-employee" class="sideNavItem">
+                                <customData>
+                                    <core:CustomData id="_IDGenCustomData446" key="route" value="RouteMain3"/>
+                                </customData>
+                            </StandardListItem>
+                            <StandardListItem id="onListItem447" title="{i18n>item1Dash3}" type="Navigation" icon="sap-icon://account" class="sideNavItem">
+                                <customData>
+                                    <core:CustomData id="_IDGenCustomData447" key="route" value="RouteMain4"/>
+                                </customData>
+                            </StandardListItem>
+                            <StandardListItem id="onListItem448" title="{i18n>item1Dash4}" type="Navigation" icon="sap-icon://customer" class="sideNavItem">
+                                <customData>
+                                    <core:CustomData id="_IDGenCustomData448" key="route" value="RouteMain5"/>
+                                </customData>
+                            </StandardListItem>
+                        </items>
+                    </List>
+                </content>
+            </Page>
+        </masterPages>
+    </SplitContainer>
+</mvc:View>

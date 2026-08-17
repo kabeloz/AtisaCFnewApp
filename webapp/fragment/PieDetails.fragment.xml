@@ -1,0 +1,135 @@
+<core:FragmentDefinition xmlns="sap.m"
+    xmlns:core="sap.ui.core">
+
+    <Dialog id="pieDetailsDialog" title="Claim Details" contentWidth="650px" contentHeight="600px" resizable="true" draggable="true">
+
+        <content>
+
+            <VBox id="_IDGenVBox15" class="sapUiMediumMargin" width="100%">
+
+                <!-- Header -->
+                <HBox id="_IDGenHBox" alignItems="Center" class="sapUiSmallMarginBottom">
+                    <core:Icon id="_IDGenIcon3" src="sap-icon://business-objects-experience" size="2rem" color="{chart>color}"/>
+                    <VBox id="_IDGenVBox16" class="sapUiSmallMarginBegin">
+                        <Title id="_IDGenTitle" text="{chart>CompanyName}" level="H3"/>
+                        <Text id="_IDGenText" text="{chart>ClaimNo}"/>
+                    </VBox>
+                </HBox>
+                <!-- Claim Information -->
+                <Toolbar id="_IDGenToolbar">
+                    <Title id="_IDGenTitle11" text="Claim Information"/>
+                </Toolbar>
+
+                <ObjectAttribute id="_IDGenObjectAttributeClaimNo" title="Claim Number" text="{chart>ClaimNo}"/>
+                <ObjectAttribute id="_IDGenObjectAttributeCompany" title="Company" text="{chart>CompanyName}"/>
+                <ObjectAttribute id="_IDGenObjectAttributeType" title="Claim Type" text="{chart>ClaimType}"/>
+                <ObjectAttribute id="_IDGenObjectAttributeCategory" title="Category" text="{chart>Category}"/>
+                <ObjectAttribute id="_IDGenObjectAttributeCustomers" title="Claim Count" text="{chart>ClaimCount}"/>
+                <ObjectAttribute id="_IDGenObjectAttributeDescription" title="Description" text="{chart>Description}"/>
+                <ObjectAttribute id="_IDGenObjectAttributeLastUpdated" title="Last Updated" text="{chart>LastUpdated}"/>
+                <ObjectAttribute id="_IDGenObjectAttribute1" title="Claim Status" text="{chart>ClaimStatus}"/>
+
+                <ObjectAttribute id="_IDGenObjectAttribute2" title="Priority" text="{chart>Priority}"/>
+                <ObjectAttribute id="_IDGenObjectAttribute3" title="Employee" text="{chart>EmployeeName}"/>
+                <ObjectAttribute id="_IDGenObjectAttribute9" title="Employee ID" text="{chart>EmployeeId}"/>
+                <ObjectAttribute id="_IDGenObjectAttribute10" title="Incident Date" text="{chart>IncidentDate}"/>
+                <ObjectAttribute id="_IDGenObjectAttribute11" title="Submitted Date" text="{chart>ClaimSubmittedDate}"/>
+                <ObjectAttribute id="_IDGenObjectAttribute12" title="Injury Type" text="{chart>InjuryType}"/>
+                <ObjectAttribute id="_IDGenObjectAttribute13" title="Body Part" text="{chart>BodyPart}"/>
+
+
+                <Toolbar id="_IDGenToolbarFinancial" class="sapUiSmallMarginTop">
+
+                    <Title id="_IDGenTitleFinancial" text="Financial Information"/>
+
+                </Toolbar>
+
+                <ObjectAttribute id="_IDGenAmountClaimed" title="Amount Claimed" text="{chart>AmountClaimed}"/>
+
+                <ObjectAttribute id="_IDGenAmountApproved" title="Amount Approved" text="{chart>AmountApproved}"/>
+
+                <ObjectAttribute id="_IDGenAmountPaid" title="Amount Paid" text="{chart>AmountPaid}"/>
+
+                <ObjectAttribute id="_IDGenOutstanding" title="Outstanding Amount" text="{chart>OutstandingAmount}"/>
+
+                <ObjectAttribute id="_IDGenPaymentStatus" title="Payment Status" text="{chart>PaymentStatus}"/>
+
+                <ObjectAttribute id="_IDGenLastPayment" title="Last Payment" text="{chart>LastPaymentDate}"/>
+
+                <!-- Claim Stages -->
+                <Toolbar id="_IDGenToolbarStages" class="sapUiSmallMarginTop">
+
+                    <Title id="_IDGenTitleStages" text="Current Claim Stage"/>
+
+                </Toolbar>
+
+                <VBox id="_IDGenCurrentStage" class="sapUiSmallMarginTop" width="100%">
+
+                    <HBox id="_IDGenStageHeader" alignItems="Center" class="sapUiSmallMarginBottom">
+
+                        <core:Icon id="_IDGenStageIcon" src="sap-icon://process" size="1.5rem" class="sapUiTinyMarginEnd"/>
+
+                        <Title id="_IDGenStageName" text="{chart>stage/0/stageName}" level="H4"/>
+
+                    </HBox>
+
+
+                    <HBox id="_IDGenStageStatusRow" alignItems="Center" class="sapUiSmallMarginBottom">
+
+                        <Label id="_IDGenStageStatusLabel" text="Status:" width="100px"/>
+
+                        <ObjectStatus id="_IDGenStageStatus1" text="{chart>stage/0/status}" state="{
+                path: 'chart>stage/0/status',
+                formatter: '.formatStageStatus'
+            }"/>
+
+                    </HBox>
+
+
+                    <HBox id="_IDGenStageCompleteRow" alignItems="Center" class="sapUiSmallMarginBottom">
+
+                        <Label id="_IDGenStageCompleteLabel" text="Completion:" width="100px"/>
+
+                        <ObjectStatus id="_IDGenStageComplete1" text="{chart>stage/0/complete}" state="{
+                path: 'chart>stage/0/complete',
+                formatter: '.formatCompleteStatus'
+            }"/>
+
+                    </HBox>
+
+
+                    <HBox id="_IDGenStageDateRow" alignItems="Center" class="sapUiSmallMarginBottom">
+
+                        <Label id="_IDGenStageDateLabel" text="Date:" width="100px"/>
+
+                        <Text id="_IDGenStageDate1" text="{chart>stage/0/date}"/>
+
+                    </HBox>
+
+
+                    <VBox id="_IDGenStageReasonBox" class="sapUiSmallMarginTop">
+
+                        <Label id="_IDGenStageReasonLabel" text="Reason"/>
+
+                        <Text id="_IDGenStageReason1" text="{chart>stage/0/reason}" wrapping="true" width="100%"/>
+
+                    </VBox>
+
+                </VBox>
+
+
+
+            </VBox>
+
+        </content>
+
+
+        <beginButton>
+
+            <Button id="_IDGenButton" text="Close" type="Emphasized" press=".onClosePieDetails"/>
+
+        </beginButton>
+
+    </Dialog>
+
+</core:FragmentDefinition>

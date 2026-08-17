@@ -1,0 +1,135 @@
+{
+    "items": [
+        {
+            "Category": "My Claims",
+            "Value": 35,
+            "color": "#97c8fa",
+
+            "Approved": 30,
+            "Rejected": 1,
+            "Inprogress": 4,
+            "Pending": 2,
+
+            "Submitted": 35,
+            "Completed": 31,
+            "Outstanding": 4,
+
+            "AverageProcessingDays": 12,
+            "OldestClaimDays": 28,
+
+            "HighPriority": 5,
+            "MediumPriority": 18,
+            "LowPriority": 12,
+
+            "TotalAmountClaimed": 48575000,
+            "TotalAmountApproved": 39250000,
+            "TotalAmountPaid": 35000000,
+            "OutstandingAmount": 4250000,
+
+            "LastUpdated": "2026-08-17",
+            "Status": "In Progress",
+            "Description": "Claims submitted and managed by the current user."
+        },
+
+        {
+            "Category": "Payments",
+            "Value": 22,
+            "color": "#2981f5",
+
+            "Approved": 20,
+            "Rejected": 2,
+            "Inprogress": 0,
+            "Pending": 3,
+
+            "Submitted": 22,
+            "Completed": 20,
+            "Outstanding": 2,
+
+            "AverageProcessingDays": 8,
+            "OldestClaimDays": 19,
+
+            "HighPriority": 3,
+            "MediumPriority": 10,
+            "LowPriority": 9,
+
+            "TotalAmountClaimed": "R 310,450.00",
+            "TotalAmountApproved": "R 275,000.00",
+            "TotalAmountPaid": "R 250,000.00",
+            "OutstandingAmount": "R 25,000.00",
+
+            "LastUpdated": "2026-08-17",
+            "Status": "Payment Processing",
+            "Description": "Claims currently undergoing payment processing."
+        },
+
+        {
+                "Category": "Medical Reports",
+                "Value": 25,
+                "color": "#0745a3",
+
+                "Approved": 15,
+                "Rejected": 5,
+                "Inprogress": 5,
+                "Pending": 4,
+
+                "Submitted": 25,
+                "Completed": 15,
+                "Outstanding": 10,
+
+                "MedicalAssessments": 20,
+                "MedicalReportsReceived": 18,
+                "MedicalReportsOutstanding": 7,
+
+                "FitForWork": 8,
+                "TemporarilyUnfit": 6,
+                "PermanentlyUnfit": 1,
+                "AwaitingMedicalOpinion": 5,
+
+                "SpecialistReferrals": 4,
+                "FollowUpRequired": 6,
+                "AdditionalTestsRequired": 3,
+
+                "AverageAssessmentDays": 15,
+                "OldestAssessmentDays": 42,
+
+                "HighPriority": 7,
+                "MediumPriority": 11,
+                "LowPriority": 7,
+
+                "LastUpdated": "2026-08-17",
+                "Status": "Medical Assessment",
+                "Description": "Medical reports, assessments, specialist referrals and outstanding medical documentation for claims."
+            },
+
+       {
+                    "Category": "Notifications",
+                    "Value": 30,
+                    "color": "#D32F2F",
+
+                    "Read": 18,
+                    "Unread": 12,
+                    "Important": 8,
+                    "ActionRequired": 10,
+                    "Information": 12,
+
+                    "Submitted": 30,
+                    "Completed": 20,
+                    "Outstanding": 10,
+
+                    "HighPriority": 12,
+                    "MediumPriority": 10,
+                    "LowPriority": 8,
+
+                    "PendingActions": 7,
+                    "OverdueActions": 3,
+                    "UpcomingDeadlines": 5,
+
+                    "AverageResponseDays": 2,
+                    "OldestNotificationDays": 15,
+
+                    "LastUpdated": "2026-08-17",
+                    "Status": "Attention Required",
+                    "Description": "Notifications, alerts, reminders and actions requiring attention."
+                }
+    ]
+}

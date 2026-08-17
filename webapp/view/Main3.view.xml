@@ -1,0 +1,301 @@
+<mvc:View xmlns:table="sap.ui.table"
+    xmlns:chart="sap.fe.macros.chart"
+    xmlns:uxap="sap.uxap"
+    xmlns:widgets="sap.ui.integration.widgets" controllerName="cf.app.controller.Main3"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns:layout="sap.ui.layout"
+    xmlns:core="sap.ui.core"
+    xmlns:viz="sap.viz.ui5.controls"
+    xmlns:rowmodes="sap.ui.table.rowmodes"
+    xmlns:l="sap.suite.ui.commons"
+    xmlns:mc="sap.suite.ui.microchart"
+    xmlns:viz.data="sap.viz.ui5.data"
+    xmlns:viz.feeds="sap.viz.ui5.controls.common.feeds" height="100%"
+    xmlns:f="sap.f"
+    xmlns:cards="sap.f.cards"
+    xmlns:flex="sap.m"
+    xmlns="sap.m">
+    <SplitContainer id="IDSplitContainer3" initialDetail="page" initialMaster="master" class="compactSplitContainer">
+        <detailPages>
+
+            <Page id="page3" showHeader="true" enableScrolling="false" title="Individual Claims">
+                <customHeader >
+                    <Bar id="IDGenBar3" class="myCustomBar">
+                        <contentLeft>
+                            <Text id="IDGenText3" text="Individual Claims Summary" class="myCustomSize sapUiResponsiveMargin"/>
+                        </contentLeft>
+                        <contentRight>
+                            <Button id="IDGenButton3" text="{i18n>logout}" visible="true" icon="sap-icon://log" type="Success" press=".handleLogoutPress"/>
+                        </contentRight>
+                    </Bar>
+                </customHeader>
+
+                <content>
+
+                    <VBox id="_IDGenVBox22" width="100%"  height="80%" fitContainer="true" renderType="Bare">
+                        <Title id="_IDGenTitle22" text="" level="H2"/>
+                        <Toolbar id="_IDGenToolbar22">
+                            <Title id="_IDGenTitle222" text="Individual Claims Information." class="myTextColor"/>
+                            <ToolbarSpacer id="_IDGenToolbarSpacer22"/>
+                            <SearchField id="_IDGenSearchField22" width="250px" liveChange=".onSearchEmployer" search=".onSearchEmployer" placeholder="Search Employer"/>
+                                <!-- Claim Stage Filter -->
+                                    <Label
+                                        id="_IDGenLabelStageFilter"
+                                        text="Claim Stage:"
+                                        class="sapUiTinyMarginBegin"/>
+
+                                    <Select
+                                        id="_IDGenSelectStage"
+                                        width="170px"
+                                        selectedKey="ALL"
+                                        change=".onStageFilterChange">
+
+                                        <items >
+
+                                            <core:Item id="_IDGenItem1"
+                                                key="ALL"
+                                                text="All Stages"/>
+
+                                            <core:Item id="_IDGenItem2"
+                                                key="Complete"
+                                                text="Complete"/>
+
+                                            <core:Item id="_IDGenItem3"
+                                                key="Not Complete"
+                                                text="Not Complete"/>
+
+                                            <core:Item id="_IDGenItem4"
+                                                key="passed"
+                                                text="Passed"/>
+
+                                            <core:Item id="_IDGenItem5"
+                                                key="pending"
+                                                text="Pending"/>
+
+                                            <core:Item id="_IDGenItem6"
+                                                key="failed"
+                                                text="Failed"/>
+
+                                        </items>
+
+                                    </Select>
+                                    <Button id="_IDGenButton122" icon="sap-icon://refresh" tooltip="Refresh"/>
+                                    <Button id="_IDGenButton22" icon="sap-icon://excel-attachment" text="Export"/>
+                                </Toolbar>
+
+                        <table:Table id="_IDGenTable22" rows="{chart>/items}" width="100%" class="sapUiContentPadding" selectionMode="None" enableColumnReordering="true" enableSelectAll="false" fixedColumnCount="1" rowActionCount="0" showNoData="true">
+
+
+                            <table:columns>
+
+                                <!-- Claim Number -->
+                                <table:Column id="_IDGenColumnClaimNo" width="130px">
+
+                                    <Label id="_IDGenLabelClaimNo" text="Claim Number"/>
+
+                                    <table:template>
+                                        <Text id="_IDGenTextClaimNo" text="{chart>ClaimNo}"/>
+                                    </table:template>
+
+                                </table:Column>
+
+
+                                <!-- Company Name -->
+                                <table:Column id="_IDGenColumnCompany" width="230px">
+
+                                    <Label id="_IDGenLabelCompany" text="Company Name"/>
+
+                                    <table:template>
+                                        <Text id="_IDGenTextCompany" text="{chart>CompanyName}" wrapping="false"/>
+                                    </table:template>
+
+                                </table:Column>
+
+
+                                <!-- Claim Type -->
+                                <table:Column id="_IDGenColumnClaimType" width="170px">
+
+                                    <Label id="_IDGenLabelClaimType" text="Claim Type"/>
+
+                                    <table:template>
+                                        <ObjectStatus id="_IDGenObjectStatusClaimType" text="{chart>ClaimType}" state="Information"/>
+                                    </table:template>
+
+                                </table:Column>
+
+
+                                <!-- Category -->
+                                <table:Column id="_IDGenColumnCategory" width="170px">
+
+                                    <Label id="_IDGenLabelCategory" text="Category"/>
+
+                                    <table:template>
+                                        <ObjectStatus id="_IDGenObjectStatusCategory" text="{chart>Category}" state="Information"/>
+                                    </table:template>
+
+                                </table:Column>
+
+
+                                <!-- Customers -->
+                                <table:Column id="_IDGenColumnCustomers" width="110px" hAlign="Center">
+
+                                    <Label id="_IDGenLabelCustomers" text="Customers"/>
+
+                                    <table:template>
+                                        <ObjectNumber id="_IDGenObjectNumberCustomers" number="{chart>Customers}"/>
+                                    </table:template>
+
+                                </table:Column>
+
+
+                                <!-- Description -->
+                                <table:Column id="_IDGenColumnDescription" width="260px">
+
+                                    <Label id="_IDGenLabelDescription" text="Description"/>
+
+                                    <table:template>
+                                        <Text id="_IDGenTextDescription" text="{chart>Description}" wrapping="false"/>
+                                    </table:template>
+
+                                </table:Column>
+
+
+                                <!-- Last Updated -->
+                                <table:Column id="_IDGenColumnLastUpdated" width="140px">
+
+                                    <Label id="_IDGenLabelLastUpdated" text="Last Updated"/>
+
+                                    <table:template>
+                                        <Text id="_IDGenTextLastUpdated" text="{chart>LastUpdated}"/>
+                                    </table:template>
+
+                                </table:Column>
+
+
+                                <!-- Colour -->
+                                <table:Column id="_IDGenColumnColor" width="100px" hAlign="Center">
+
+                                    <Label id="_IDGenLabelColor" text="Colour"/>
+
+                                    <table:template>
+
+                                        <HBox id="_IDGenHBoxColor" alignItems="Center" justifyContent="Center">
+
+                                            <core:Icon id="_IDGenIconColor" src="sap-icon://circle-task-2" size="1rem" color="{chart>color}"/>
+
+                                        </HBox>
+
+                                    </table:template>
+
+                                </table:Column>
+
+
+                                <!-- Claim Stages -->
+                                <table:Column id="_IDGenColumnStages" width="450px">
+
+                                    <Label id="_IDGenLabelStages" text="Claim Stages"/>
+
+                                    <table:template>
+
+                                        <VBox id="_IDGenVBoxStages" width="100%" items="{chart>stage}" class="sapUiTinyMarginTop sapUiTinyMarginBottom">
+
+                                            <items>
+
+                                                <VBox id="_IDGenVBoxStageItem" class="sapUiTinyMarginBottom">
+
+                                                    <HBox id="_IDGenHBoxStage" alignItems="Center">
+
+                                                        <ObjectStatus
+                                                            id="_IDGenStageComplete"
+                                                            text="{chart>complete}"
+                                                            state="{= ${chart>complete} === 'Complete' ? 'Success' : 'Warning' }"
+                                                            class="sapUiTinyMarginEnd"/>
+
+                                                        <!-- Passed / Failed / Pending -->
+                                                        <ObjectStatus
+                                                            id="_IDGenStageStatus"
+                                                            text="{chart>status}"
+                                                            state="{= ${chart>status} === 'passed' ? 'Success' : ${chart>status} === 'failed' ? 'Error' : 'Warning' }"
+                                                            class="sapUiTinyMarginEnd"/>
+
+                                                        <Text id="_IDGenStageDate" text="{chart>date}"/>
+
+                                                    </HBox>
+
+                                                    <Text id="_IDGenStageReason" text="{chart>reason}" wrapping="true" class="sapUiTinyMarginTop"/>
+
+                                                </VBox>
+
+                                            </items>
+
+                                        </VBox>
+
+                                    </table:template>
+
+                                </table:Column>
+
+
+                                <!-- Details -->
+                                <table:Column id="_IDGenColumnActions" width="90px" hAlign="Center">
+
+                                    <Label id="_IDGenLabelActions" text="Details"/>
+
+                                    <table:template>
+
+                                        <Button id="_IDGenButtonDetails" icon="sap-icon://detail-view" type="Transparent" tooltip="View claim details" press=".onClaimDetails"/>
+
+                                    </table:template>
+
+                                </table:Column>
+
+                            </table:columns>
+                        </table:Table>
+                    </VBox>
+                </content>
+
+            </Page>
+        </detailPages>
+        <masterPages >
+            <Page id="master222" class="sapUiStdPage masterGreenPage " showHeader="true">
+                <customHeader>
+                    <Toolbar id="_IDGenToolbar222" class="logoToolbar">
+                        <content>
+                            <Image id="_IDGenImage222" src="images/CF_Logo.png" width="210px" height="120px" backgroundRepeat="no-repeat" densityAware="true" class="sidebarLogo"/>
+                        </content>
+                    </Toolbar>
+                </customHeader>
+                <content >
+                    <List id="myList222" class="professionalSideNav" itemPress=".onItemPress" mode="SingleSelectMaster" showSeparators="None">
+                        <items >
+                            <StandardListItem id="onListItem222" title="{i18n>item1Dash}" type="Navigation" icon="sap-icon://bbyd-dashboard" class="sideNavItem">
+                                <customData>
+                                    <core:CustomData id="_IDGenCustomData222" key="route" value="RouteMain1"/>
+                                </customData>
+                            </StandardListItem>
+                            <StandardListItem id="onListItem223" title="{i18n>item1Dash1}" type="Navigation" icon="sap-icon://manager" class="sideNavItem">
+                                <customData>
+                                    <core:CustomData id="_IDGenCustomData223" key="route" value="RouteMain2"/>
+                                </customData>
+                            </StandardListItem>
+                            <StandardListItem id="onListItem224" title="{i18n>item1Dash2}" type="Navigation" icon="sap-icon://add-employee" class="sideNavItem">
+                                <customData>
+                                    <core:CustomData id="_IDGenCustomData224" key="route" value="RouteMain3"/>
+                                </customData>
+                            </StandardListItem>
+                            <StandardListItem id="onListItem225" title="{i18n>item1Dash3}" type="Navigation" icon="sap-icon://account" class="sideNavItem">
+                                <customData>
+                                    <core:CustomData id="_IDGenCustomData225" key="route" value="RouteMain4"/>
+                                </customData>
+                            </StandardListItem>
+                            <StandardListItem id="onListItem226" title="{i18n>item1Dash4}" type="Navigation" icon="sap-icon://customer" class="sideNavItem">
+                                <customData>
+                                    <core:CustomData id="_IDGenCustomData226" key="route" value="RouteMain5"/>
+                                </customData>
+                            </StandardListItem>
+                        </items>
+                    </List>
+                </content>
+            </Page>
+        </masterPages>
+    </SplitContainer>
+</mvc:View>

@@ -1,0 +1,554 @@
+{
+    "items": [
+        {
+            "ClaimNo": "10000015",
+            "CompanyName": "J V M INSTALLATIONS CC",
+            "CompanyRegistrationNo": "2016/458921/07",
+            "EmployeeName": "Thabo Mokoena",
+            "EmployeeId": "EMP-001245",
+            "ClaimType": "Liability",
+            "Category": "My Employers",
+            "IncidentDate": "25/03/2024",
+            "ClaimSubmittedDate": "28/03/2024",
+            "LastUpdated": "30/07/2026",
+            "InjuryType": "Workplace Accident",
+            "BodyPart": "Lower Back",
+            "IncidentDescription": "Employee reported a workplace injury while performing duties at the employer's premises.",
+            "ClaimStatus": "Pending",
+            "Priority": "High",
+            "ClaimCount": 45,
+            "AmountClaimed": 52000,
+            "AmountApproved": 0,
+            "AmountPaid": 0,
+            "OutstandingAmount": 52000,
+            "MedicalAssessment": "Pending",
+            "MedicalAssessmentDate": "",
+            "AdjudicationStatus": "Pending",
+            "AdjudicationDate": "",
+            "PaymentStatus": "Not Processed",
+            "LastPaymentDate": "",
+            "color": "#1976D2",
+            "Description": "Number of Registered Employers",
+            "stage": [
+                {
+                    "stageName": "Claim Notification",
+                    "complete": "Not Complete",
+                    "status": "Pending",
+                    "date": "28/03/2024",
+                    "reason": "Incomplete Documents"
+                },
+                {
+                    "stageName": "Document Verification",
+                    "complete": "Complete",
+                    "status": "Failed",
+                    "date": "28/03/2025",
+                    "reason": "Missing required documents"
+                },
+                {
+                    "stageName": "Medical Evaluation",
+                    "complete": "Not Complete",
+                    "status": "Pending",
+                    "date": "",
+                    "reason": "Medical evaluation cannot proceed until the required documents are submitted."
+                },
+                {
+                    "stageName": "Adjudication",
+                    "complete": "Not Complete",
+                    "status": "Pending",
+                    "date": "",
+                    "reason": "Claim is awaiting completion of the verification process."
+                },
+                {
+                    "stageName": "Payment Processing",
+                    "complete": "Not Complete",
+                    "status": "Pending",
+                    "date": "",
+                    "reason": "Payment processing has not started."
+                },
+                {
+                    "stageName": "Claim Closure",
+                    "complete": "Not Complete",
+                    "status": "Pending",
+                    "date": "",
+                    "reason": "Claim remains open."
+                }
+            ]
+        },
+        {
+            "ClaimNo": "10000016",
+            "CompanyName": "ABC CONSTRUCTION LTD",
+            "CompanyRegistrationNo": "2019/784521/07",
+            "EmployeeName": "Lerato Nkosi",
+            "EmployeeId": "EMP-002781",
+            "ClaimType": "Medical",
+            "Category": "Services Rendered",
+            "IncidentDate": "22/03/2024",
+            "ClaimSubmittedDate": "28/03/2024",
+            "LastUpdated": "30/07/2026",
+            "InjuryType": "Occupational Injury",
+            "BodyPart": "Knee",
+            "IncidentDescription": "Employee received medical treatment following an occupational injury sustained during construction activities.",
+            "ClaimStatus": "Pending",
+            "Priority": "Medium",
+            "ClaimCount": 39,
+            "AmountClaimed": 28500,
+            "AmountApproved": 0,
+            "AmountPaid": 0,
+            "OutstandingAmount": 28500,
+            "MedicalAssessment": "Pending",
+            "MedicalAssessmentDate": "",
+            "AdjudicationStatus": "Pending",
+            "AdjudicationDate": "",
+            "PaymentStatus": "Not Processed",
+            "LastPaymentDate": "",
+            "color": "#FB8C00",
+            "Description": "Number of Active Claims",
+            "stage": [
+                {
+                    "stageName": "Claim Notification",
+                    "complete": "Complete",
+                    "status": "Passed",
+                    "date": "28/03/2024",
+                    "reason": "Claim notification successfully received."
+                },
+                {
+                    "stageName": "Document Verification",
+                    "complete": "Not Complete",
+                    "status": "Pending",
+                    "date": "28/03/2024",
+                    "reason": "Missing required documents."
+                },
+                {
+                    "stageName": "Medical Evaluation",
+                    "complete": "Complete",
+                    "status": "Failed",
+                    "date": "28/03/2025",
+                    "reason": "Medical report did not meet the required assessment criteria."
+                },
+                {
+                    "stageName": "Adjudication",
+                    "complete": "Not Complete",
+                    "status": "Pending",
+                    "date": "",
+                    "reason": "Adjudication is awaiting a compliant medical report."
+                },
+                {
+                    "stageName": "Payment Processing",
+                    "complete": "Not Complete",
+                    "status": "Pending",
+                    "date": "",
+                    "reason": "Payment cannot proceed until the claim is approved."
+                },
+                {
+                    "stageName": "Claim Closure",
+                    "complete": "Not Complete",
+                    "status": "Pending",
+                    "date": "",
+                    "reason": "Claim remains open pending further assessment."
+                }
+            ]
+        },
+        {
+            "ClaimNo": "10000017",
+            "CompanyName": "XYZ HOLDINGS",
+            "CompanyRegistrationNo": "2017/365214/07",
+            "EmployeeName": "Sipho Dlamini",
+            "EmployeeId": "EMP-003562",
+            "ClaimType": "Workplace Injury",
+            "Category": "New Claims",
+            "IncidentDate": "26/03/2024",
+            "ClaimSubmittedDate": "28/03/2024",
+            "LastUpdated": "30/07/2026",
+            "InjuryType": "Hand Injury",
+            "BodyPart": "Left Hand",
+            "IncidentDescription": "Employee sustained a hand injury while operating equipment at the workplace.",
+            "ClaimStatus": "Rejected",
+            "Priority": "High",
+            "ClaimCount": 39,
+            "AmountClaimed": 67500,
+            "AmountApproved": 0,
+            "AmountPaid": 0,
+            "OutstandingAmount": 0,
+            "MedicalAssessment": "Completed",
+            "MedicalAssessmentDate": "28/03/2025",
+            "AdjudicationStatus": "Rejected",
+            "AdjudicationDate": "28/03/2025",
+            "PaymentStatus": "Not Applicable",
+            "LastPaymentDate": "",
+            "color": "#26A69A",
+            "Description": "Recently Submitted Claims",
+            "stage": [
+                {
+                    "stageName": "Claim Notification",
+                    "complete": "Complete",
+                    "status": "Passed",
+                    "date": "28/03/2024",
+                    "reason": "Claim notification successfully received."
+                },
+                {
+                    "stageName": "Document Verification",
+                    "complete": "Complete",
+                    "status": "Passed",
+                    "date": "28/03/2024",
+                    "reason": "Required claim documentation was received."
+                },
+                {
+                    "stageName": "Medical Evaluation",
+                    "complete": "Complete",
+                    "status": "Failed",
+                    "date": "28/03/2025",
+                    "reason": "Medical report did not meet the required criteria."
+                },
+                {
+                    "stageName": "Adjudication",
+                    "complete": "Complete",
+                    "status": "Failed",
+                    "date": "28/03/2025",
+                    "reason": "Approval was denied following assessment."
+                },
+                {
+                    "stageName": "Payment Processing",
+                    "complete": "Complete",
+                    "status": "Failed",
+                    "date": "28/03/2025",
+                    "reason": "Payment was not authorised because the claim was rejected."
+                },
+                {
+                    "stageName": "Claim Closure",
+                    "complete": "Complete",
+                    "status": "Passed",
+                    "date": "30/03/2025",
+                    "reason": "Claim closed following the rejection decision."
+                }
+            ]
+        },
+        {
+            "ClaimNo": "10000018",
+            "CompanyName": "XYZ MANUFACTURING",
+            "CompanyRegistrationNo": "2015/987412/07",
+            "EmployeeName": "Mpho Khumalo",
+            "EmployeeId": "EMP-004128",
+            "ClaimType": "Workplace Injury",
+            "Category": "Approved",
+            "IncidentDate": "25/03/2024",
+            "ClaimSubmittedDate": "28/03/2024",
+            "LastUpdated": "30/07/2026",
+            "InjuryType": "Shoulder Injury",
+            "BodyPart": "Right Shoulder",
+            "IncidentDescription": "Employee sustained a shoulder injury while performing manual duties at the manufacturing facility.",
+            "ClaimStatus": "Approved",
+            "Priority": "Medium",
+            "ClaimCount": 39,
+            "AmountClaimed": 85000,
+            "AmountApproved": 72000,
+            "AmountPaid": 45000,
+            "OutstandingAmount": 27000,
+            "MedicalAssessment": "Completed",
+            "MedicalAssessmentDate": "28/03/2024",
+            "AdjudicationStatus": "Approved",
+            "AdjudicationDate": "28/03/2025",
+            "PaymentStatus": "Partially Paid",
+            "LastPaymentDate": "25/07/2026",
+            "color": "#7CB342",
+            "Description": "Approved Claim Status",
+            "stage": [
+                {
+                    "stageName": "Claim Notification",
+                    "complete": "Complete",
+                    "status": "Passed",
+                    "date": "28/03/2024",
+                    "reason": "Claim notification successfully received."
+                },
+                {
+                    "stageName": "Document Verification",
+                    "complete": "Complete",
+                    "status": "Passed",
+                    "date": "28/03/2024",
+                    "reason": "All required documentation was successfully verified."
+                },
+                {
+                    "stageName": "Medical Evaluation",
+                    "complete": "Complete",
+                    "status": "Passed",
+                    "date": "28/03/2024",
+                    "reason": "Medical assessment completed successfully."
+                },
+                {
+                    "stageName": "Adjudication",
+                    "complete": "Complete",
+                    "status": "Passed",
+                    "date": "28/03/2025",
+                    "reason": "Claim approved following successful adjudication."
+                },
+                {
+                    "stageName": "Payment Processing",
+                    "complete": "In Progress",
+                    "status": "Pending",
+                    "date": "30/07/2026",
+                    "reason": "Partial payment has been made and the outstanding amount is being processed."
+                },
+                {
+                    "stageName": "Claim Closure",
+                    "complete": "Not Complete",
+                    "status": "Pending",
+                    "date": "",
+                    "reason": "Claim will be closed once the outstanding payment has been processed."
+                }
+            ]
+        },
+        {
+            "ClaimNo": "10000020",
+            "CompanyName": "ABC MINING (PTY) LTD",
+            "CompanyRegistrationNo": "2005/456789/07",
+            "EmployeeName": "Thabo Molefe",
+            "EmployeeId": "EMP-006731",
+            "ClaimType": "Occupational Injury",
+            "Category": "Active Claims",
+            "IncidentDate": "12/06/2025",
+            "ClaimSubmittedDate": "16/06/2025",
+            "LastUpdated": "05/08/2026",
+            "InjuryType": "Lower Back Injury",
+            "BodyPart": "Lower Back",
+            "IncidentDescription": "Employee sustained a lower back injury while lifting heavy equipment at the mining site.",
+            "ClaimStatus": "Approved",
+            "Priority": "Medium",
+            "ClaimCount": 20,
+            "AmountClaimed": 68000,
+            "AmountApproved": 62000,
+            "AmountPaid": 62000,
+            "OutstandingAmount": 0,
+            "MedicalAssessment": "Completed",
+            "MedicalAssessmentDate": "28/06/2025",
+            "AdjudicationStatus": "Approved",
+            "AdjudicationDate": "15/07/2025",
+            "PaymentStatus": "Paid",
+            "LastPaymentDate": "10/08/2025",
+            "Description": "Occupational injury claim approved and fully paid.",
+            "stage": [
+                {
+                    "stageName": "Claim Notification",
+                    "complete": "Complete",
+                    "status": "Passed",
+                    "date": "16/06/2025",
+                    "reason": "Claim notification successfully received."
+                },
+                {
+                    "stageName": "Claim Registration",
+                    "complete": "Complete",
+                    "status": "Passed",
+                    "date": "17/06/2025",
+                    "reason": "Claim successfully registered."
+                },
+                {
+                    "stageName": "Document Verification",
+                    "complete": "Complete",
+                    "status": "Passed",
+                    "date": "20/06/2025",
+                    "reason": "All supporting documentation was verified."
+                },
+                {
+                    "stageName": "Medical Evaluation",
+                    "complete": "Complete",
+                    "status": "Passed",
+                    "date": "28/06/2025",
+                    "reason": "Medical assessment completed successfully."
+                },
+                {
+                    "stageName": "Adjudication",
+                    "complete": "Complete",
+                    "status": "Passed",
+                    "date": "15/07/2025",
+                    "reason": "Claim approved following adjudication."
+                },
+                {
+                    "stageName": "Payment Processing",
+                    "complete": "Complete",
+                    "status": "Passed",
+                    "date": "10/08/2025",
+                    "reason": "Full approved amount successfully paid."
+                },
+                {
+                    "stageName": "Claim Closure",
+                    "complete": "Complete",
+                    "status": "Passed",
+                    "date": "15/08/2025",
+                    "reason": "Claim successfully closed after full payment."
+                }
+            ]
+        },
+        {
+            "ClaimNo": "10000021",
+            "CompanyName": "SUNRISE LOGISTICS",
+            "CompanyRegistrationNo": "2012/789456/07",
+            "EmployeeName": "Nomsa Dlamini",
+            "EmployeeId": "EMP-007245",
+            "ClaimType": "Workplace Injury",
+            "Category": "Pending Claims",
+            "IncidentDate": "08/01/2026",
+            "ClaimSubmittedDate": "12/01/2026",
+            "LastUpdated": "08/08/2026",
+            "InjuryType": "Knee Injury",
+            "BodyPart": "Left Knee",
+            "IncidentDescription": "Employee injured the left knee after slipping on a wet surface inside the warehouse.",
+            "ClaimStatus": "Pending",
+            "Priority": "High",
+            "ClaimCount": 21,
+            "AmountClaimed": 52000,
+            "AmountApproved": 0,
+            "AmountPaid": 0,
+            "OutstandingAmount": 52000,
+            "MedicalAssessment": "Completed",
+            "MedicalAssessmentDate": "02/02/2026",
+            "AdjudicationStatus": "Pending",
+            "AdjudicationDate": "",
+            "PaymentStatus": "Not Processed",
+            "LastPaymentDate": "",
+            "Description": "Claim is awaiting final adjudication following completion of the medical assessment.",
+            "stage": [
+                {
+                    "stageName": "Claim Notification",
+                    "complete": "Complete",
+                    "status": "Passed",
+                    "date": "12/01/2026",
+                    "reason": "Claim notification successfully received."
+                },
+                {
+                    "stageName": "Claim Registration",
+                    "complete": "Complete",
+                    "status": "Passed",
+                    "date": "13/01/2026",
+                    "reason": "Claim successfully registered."
+                },
+                {
+                    "stageName": "Document Verification",
+                    "complete": "Complete",
+                    "status": "Passed",
+                    "date": "20/01/2026",
+                    "reason": "Required supporting documents verified."
+                },
+                {
+                    "stageName": "Medical Evaluation",
+                    "complete": "Complete",
+                    "status": "Passed",
+                    "date": "02/02/2026",
+                    "reason": "Medical assessment completed."
+                },
+                {
+                    "stageName": "Adjudication",
+                    "complete": "In Progress",
+                    "status": "Pending",
+                    "date": "08/08/2026",
+                    "reason": "Claim is currently awaiting adjudication."
+                },
+                {
+                    "stageName": "Payment Processing",
+                    "complete": "Incomplete",
+                    "status": "Pending",
+                    "date": "",
+                    "reason": "Payment processing will begin after adjudication."
+                },
+                {
+                    "stageName": "Claim Closure",
+                    "complete": "Incomplete",
+                    "status": "Pending",
+                    "date": "",
+                    "reason": "Claim cannot be closed until adjudication and payment are completed."
+                }
+            ]
+        },
+        {
+            "ClaimNo": "10000023",
+            "CompanyName": "CAPE RETAIL HOLDINGS",
+            "CompanyRegistrationNo": "2019/667788/07",
+            "EmployeeName": "Lerato Maseko",
+            "EmployeeId": "EMP-009634",
+            "ClaimType": "Workplace Injury",
+            "Category": "Claims Status",
+            "IncidentDate": "04/11/2025",
+            "ClaimSubmittedDate": "07/11/2025",
+            "LastUpdated": "28/07/2026",
+            "InjuryType": "Shoulder Injury",
+            "BodyPart": "Left Shoulder",
+            "IncidentDescription": "Employee sustained a shoulder injury while moving stock in the retail warehouse.",
+            "ClaimStatus": "Rejected",
+            "Priority": "Medium",
+            "ClaimCount": 23,
+            "AmountClaimed": 36000,
+            "AmountApproved": 0,
+            "AmountPaid": 0,
+            "OutstandingAmount": 0,
+            "MedicalAssessment": "Completed",
+            "MedicalAssessmentDate": "20/11/2025",
+            "AdjudicationStatus": "Rejected",
+            "AdjudicationDate": "15/12/2025",
+            "PaymentStatus": "Not Processed",
+            "LastPaymentDate": "",
+            "Description": "Claim was rejected following adjudication due to insufficient supporting evidence.",
+            "stage": [
+                {
+                    "stageName": "Claim Notification",
+                    "complete": "Complete",
+                    "status": "Passed",
+                    "date": "07/11/2025",
+                    "reason": "Claim notification successfully received."
+                },
+                {
+                    "stageName": "Claim Registration",
+                    "complete": "Complete",
+                    "status": "Passed",
+                    "date": "08/11/2025",
+                    "reason": "Claim successfully registered."
+                },
+                {
+                    "stageName": "Document Verification",
+                    "complete": "Complete",
+                    "status": "Passed",
+                    "date": "12/11/2025",
+                    "reason": "Initial supporting documentation verified."
+                },
+                {
+                    "stageName": "Medical Evaluation",
+                    "complete": "Complete",
+                    "status": "Passed",
+                    "date": "20/11/2025",
+                    "reason": "Medical assessment completed."
+                },
+                {
+                    "stageName": "Adjudication",
+                    "complete": "Complete",
+                    "status": "Failed",
+                    "date": "15/12/2025",
+                    "reason": "Claim rejected due to insufficient supporting evidence."
+                },
+                {
+                    "stageName": "Payment Processing",
+                    "complete": "Not Complete",
+                    "status": "Pending",
+                    "date": "",
+                    "reason": "No payment is due following the rejected claim."
+                },
+                {
+                    "stageName": "Claim Closure",
+                    "complete": "Complete",
+                    "status": "Passed",
+                    "date": "28/07/2026",
+                    "reason": "Claim closed following final adjudication."
+                }
+            ]
+        }
+    ],
+    "scales": [
+        {
+            "feed": "color",
+            "palette": [
+                "#1976D2",
+                "#FB8C00",
+                "#26A69A",
+                "#7CB342",
+                "#D32F2F",
+                "#8E44AD",
+                "#16A085"
+            ]
+        }
+    ]
+}

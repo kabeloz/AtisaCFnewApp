@@ -1,0 +1,40 @@
+{
+    "items": [
+        {
+            "Practice": "Group Practice",
+            "Quantity": 42,
+            "Percentage": 42,
+            "Active": 38,
+            "Inactive": 4,
+            "Pending": 2,
+            "Region": "Gauteng",
+            "Growth": 12,
+            "LastUpdated": "2026-08-06",
+            "Color": "Group"
+        },
+        {
+            "Practice": "Private Practice",
+            "Quantity": 68,
+            "Percentage": 68,
+            "Active": 60,
+            "Inactive": 8,
+            "Pending": 5,
+            "Region": "Western Cape",
+            "Growth": 18,
+            "LastUpdated": "2026-08-06",
+            "Color": "Private "
+        },
+        {
+            "Practice": "Public Practice",
+            "Quantity": 31,
+            "Percentage": 31,
+            "Active": 27,
+            "Inactive": 4,
+            "Pending": 1,
+            "Region": "KwaZulu-Natal",
+            "Growth": -3,
+            "LastUpdated": "2026-08-06",
+            "Color": "Public "
+        }
+    ]
+}

@@ -1,0 +1,149 @@
+<mvc:View xmlns:widgets="sap.ui.integration.widgets" controllerName="cf.app.controller.Main5"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns:layout="sap.ui.layout"
+    xmlns:viz="sap.viz.ui5.controls"
+    xmlns:l="sap.suite.ui.commons"
+    xmlns:mc="sap.suite.ui.microchart"
+    xmlns:viz.data="sap.viz.ui5.data"
+    xmlns:viz.feeds="sap.viz.ui5.controls.common.feeds" height="100%"
+    xmlns:f="sap.f"
+    xmlns:tnt="sap.tnt"
+    xmlns:core="sap.ui.core"
+    xmlns:form="sap.ui.layout.form"
+    xmlns:cards="sap.f.cards"
+    xmlns="sap.m">
+    <SplitContainer id="IDSplitContainer5" initialDetail="page" initialMaster="master" class="compactSplitContainer">
+        <detailPages >
+            <Page id="page5" showHeader="true" title="{i18n>title}" class="">
+                <customHeader >
+                    <Bar id="IDGenBar5" class="myCustomBar">
+                        <contentLeft>
+                            <Text id="IDGenText05" text="{i18n>HeadingInfo}" class="myCustomSize sapUiResponsiveMargin"/>
+                            <Text id="IDGenText06" text="{i18n>HeadingInfo02}" />
+                        </contentLeft>
+                        <contentRight>
+                            <Button id="IDGenButton5" text="{i18n>logout}" icon="sap-icon://log" type="Success" press=".handleLogoutPress"/>
+                        </contentRight>
+                    </Bar>
+                </customHeader>
+                <content>
+                <HBox id="_IDGenHBox8" width="100%" justifyContent="Center" >
+                    <VBox id="_IDGenVBox9" width="650px" class="centerProfile sapUiLargeMarginTop" >
+
+                        <!-- Profile Header -->
+                        <f:Card id="_IDGenCard1" width="650px" class="profileCard hoverVBox sapUiLargeMarginTop">
+                            <f:content>
+                                <HBox id="_IDGenHBox4" alignItems="Center" class="sapUiMediumMargin">
+                                    <Avatar id="_IDGenAvatar2" displaySize="XL" initials="{users>/items/0/Initials}"/>
+                                    <VBox id="_IDGenVBox10" class="sapUiMediumMarginBegin">
+                                        <Title id="_IDGenTitle9" text="{users>/items/0/Name}"/>
+                                        <ObjectStatus id="_IDGenObjectStatus" text="Active" state="Success"/>
+                                        <Text id="_IDGenText4" text="{users>/items/0/Email}"/>
+                                    </VBox>
+                                </HBox>
+                            </f:content>
+                        </f:Card>
+                        <!-- Role Card -->
+                        <f:Card id="_IDGenCard2" width="650px" class="profileCard hoverVBox sapUiMediumMarginTop">
+                            <f:header>
+                                <cards:Header id="_IDGenHeader3"
+                                    xmlns:cards="sap.f.cards" title="{users>/items/0/Role}"/>
+                            </f:header>
+                            <f:content>
+                                <VBox id="_IDGenVBox11" class="sapUiMediumMargin">
+                                    <Title id="_IDGenTitle10" text="XXX XXX"/>
+                                    <Text id="_IDGenText10" text="Full system access, user management and administrative controls."/>
+                                </VBox>
+                            </f:content>
+                        </f:Card>
+
+                        <!-- Account Details -->
+                        <f:Card id="_IDGenCard7" width="650px" class="profileCard hoverVBox sapUiMediumMarginTop">
+                            <f:header>
+                                <cards:Header id="_IDGenHeader9" title="Account Details"/>
+                            </f:header>
+                            <f:content>
+                                <VBox id="_IDGenVBox12" class="sapUiMediumMargin">
+                                    <HBox id="_IDGenHBox5" class="sapUiTinyMarginBottom" alignItems="Start">
+                                        <core:Icon id="_IDGenIcon" src="sap-icon://person-placeholder"/>
+                                        <VBox id="_IDGenVBox6" class="sapUiSmallMarginBegin">
+                                            <Label id="_IDGenLabel" text="{users>/items/0/Full_Name}"/>
+                                            <Text id="_IDGenText11" text="{profile>/Name}"/>
+                                        </VBox>
+                                    </HBox>
+                                    <HBox id="_IDGenHBox6" class="sapUiTinyMarginBottom" alignItems="Start">
+                                        <core:Icon id="_IDGenIcon1" src="sap-icon://email"/>
+                                        <VBox id="_IDGenVBox13" class="sapUiSmallMarginBegin">
+                                            <Label id="_IDGenLabel1" text="{users>/items/0/Email}"/>
+                                            <Text id="_IDGenText12" text="{profile>/Email}"/>
+                                        </VBox>
+                                    </HBox>
+                                    <HBox id="_IDGenHBox7" class="sapUiTinyMarginBottom" alignItems="Start">
+                                        <core:Icon id="_IDGenIcon2" src="sap-icon://employee"/>
+                                        <VBox id="_IDGenVBox14" class="sapUiSmallMarginBegin">
+                                            <Label id="_IDGenLabel2" text="{users>/items/0/User_Type}"/>
+                                            <Text id="_IDGenText13" text="{profile>/Role}"/>
+                                        </VBox>
+                                    </HBox>
+
+                                    <HBox id="_IDGenHBox08" class="sapUiTinyMarginBottom" alignItems="Start">
+                                        <core:Icon id="_IDGenIcon08" src="sap-icon://log"/>
+                                        <VBox id="_IDGenVBox08" class="sapUiSmallMarginBegin">
+                                            <Label id="_IDGenLabel08" text="{users>/items/0/Last_Login}" />
+                                            <Text id="_IDGenText08" text="{profile>/Last_Login}"
+                                            />
+                                        </VBox>
+                                    </HBox>
+                                </VBox>
+                            </f:content>
+
+                        </f:Card>
+                    </VBox>
+                    </HBox>
+                </content>
+            </Page>
+        </detailPages>
+        <masterPages >
+            <Page id="master555" class="sapUiStdPage masterGreenPage " showHeader="true">
+                <customHeader>
+                    <Toolbar id="_IDGenToolbar555" class="logoToolbar">
+                        <content>
+                            <Image id="_IDGenImage555" src="images/CF_Logo.png" width="210px" height="120px" backgroundRepeat="no-repeat" densityAware="true" class="sidebarLogo"/>
+                        </content>
+                    </Toolbar>
+                </customHeader>
+                <content >
+                    <List id="myList55" class="professionalSideNav" itemPress=".onItemPress" mode="SingleSelectMaster" showSeparators="None">
+                        <items >
+                            <StandardListItem id="onListItem555" title="{i18n>item1Dash}" type="Navigation" icon="sap-icon://bbyd-dashboard" class="sideNavItem">
+                                <customData>
+                                    <core:CustomData id="_IDGenCustomData555" key="route" value="RouteMain1"/>
+                                </customData>
+                            </StandardListItem>
+                            <StandardListItem id="onListItem556" title="{i18n>item1Dash1}" type="Navigation" icon="sap-icon://manager" class="sideNavItem">
+                                 <customData>
+                                    <core:CustomData id="_IDGenCustomData556" key="route" value="RouteMain2"/>
+                                </customData>
+                            </StandardListItem>
+                            <StandardListItem id="onListItem557" title="{i18n>item1Dash2}" type="Navigation" icon="sap-icon://add-employee" class="sideNavItem">
+                                <customData>
+                                    <core:CustomData id="_IDGenCustomData557" key="route" value="RouteMain3"/>
+                                </customData>
+                            </StandardListItem>
+                            <StandardListItem id="onListItem558" title="{i18n>item1Dash3}" type="Navigation" icon="sap-icon://account" class="sideNavItem">
+                                <customData>
+                                    <core:CustomData id="_IDGenCustomData558" key="route" value="RouteMain4"/>
+                                </customData>
+                            </StandardListItem>
+                            <StandardListItem id="onListItem559" title="{i18n>item1Dash4}" type="Navigation" icon="sap-icon://customer" class="sideNavItem">
+                                <customData>
+                                    <core:CustomData id="_IDGenCustomData559" key="route" value="RouteMain5"/>
+                                </customData>
+                            </StandardListItem>
+                        </items>
+                    </List>
+                </content>
+            </Page>
+        </masterPages>
+    </SplitContainer>
+</mvc:View>
