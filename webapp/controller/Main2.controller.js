@@ -335,16 +335,24 @@ sap.ui.define([
 
         onSearchEmployer: function (oEvent) {
 
+            
+
             var sValue = oEvent.getParameter("newValue") ||
                 oEvent.getParameter("query");
 
             var oTable = this.byId("_IDGenTable");
             var oBinding = oTable.getBinding("rows");
 
-            if (!sValue) {
-                oBinding.filter([]);
-                return;
-            }
+             if (!oBinding) {
+                    return;
+                }
+
+                if (!sValue) {
+                    oBinding.filter([]);
+                    return;
+                }
+
+                sValue = String(sValue).trim();
 
             var aFilters = [
 
@@ -359,15 +367,29 @@ sap.ui.define([
                 new Filter("Compliance_Status", FilterOperator.Contains, sValue),
                 new Filter("Last_Login", FilterOperator.Contains, sValue),
                 new Filter("Submitted_Date", FilterOperator.Contains, sValue),
-                new Filter("Company_Registration_Date", FilterOperator.Contains, sValue),
-                new Filter("Total_Payments", FilterOperator.Contains, sValue)
+                new Filter("Company_Registration_Date", FilterOperator.Contains, sValue)
 
             ];
 
-            oBinding.filter(new Filter({
-                filters: aFilters,
-                and: false
-            }));
+             // Numeric field
+                    if (!isNaN(sValue)) {
+
+                        aFilters.push(
+                            new Filter(
+                                "Total_Payments",
+                                FilterOperator.EQ,
+                                Number(sValue)
+                            )
+                        );
+
+                    }
+
+                    var oCombinedFilter = new Filter({
+                        filters: aFilters,
+                        and: false
+                    });
+
+                    oBinding.filter(oCombinedFilter);
 
         }
 
