@@ -24,9 +24,9 @@
                         <contentLeft>
                             <Text id="IDGenText3" text="Individual Claims Summary" class="myCustomSize sapUiResponsiveMargin"/>
                         </contentLeft>
-                        <contentRight>
+                        <!-- <contentRight>
                             <Button id="IDGenButton3" text="{i18n>logout}" visible="true" icon="sap-icon://log" type="Success" press=".handleLogoutPress"/>
-                        </contentRight>
+                        </contentRight> -->
                     </Bar>
                 </customHeader>
 

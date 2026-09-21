@@ -21,9 +21,9 @@
                             <Text id="IDGenText05" text="{i18n>HeadingInfo}" class="myCustomSize sapUiResponsiveMargin"/>
                             <Text id="IDGenText06" text="{i18n>HeadingInfo02}" />
                         </contentLeft>
-                        <contentRight>
+                        <!-- <contentRight>
                             <Button id="IDGenButton5" text="{i18n>logout}" icon="sap-icon://log" type="Success" press=".handleLogoutPress"/>
-                        </contentRight>
+                        </contentRight> -->
                     </Bar>
                 </customHeader>
                 <content>

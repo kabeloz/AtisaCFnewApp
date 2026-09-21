@@ -23,9 +23,9 @@
                         <contentLeft>
                             <Text id="IDGenText011" text="Third Party Summary" class="myCustomSize sapUiResponsiveMargin"/>
                         </contentLeft>
-                        <contentRight>
+                        <!-- <contentRight>
                             <Button id="IDGenButton11" text="{i18n>logout}" visible="true" icon="sap-icon://log" type="Success" press=".handleLogoutPress"/>
-                        </contentRight>
+                        </contentRight> -->
                     </Bar>
                 </customHeader>
                 <!-- <Toolbar id="_IDGenToolbar6" height="2.5rem">

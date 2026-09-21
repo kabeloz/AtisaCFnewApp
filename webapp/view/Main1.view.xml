@@ -1,4 +1,4 @@
-<mvc:View xmlns:chart="sap.fe.macros.chart"
+<mvc:View xmlns:vbm="sap.ui.vbm" xmlns:chart="sap.fe.macros.chart"
     xmlns:widgets="sap.ui.integration.widgets" controllerName="cf.app.controller.Main1"
     xmlns:mvc="sap.ui.core.mvc"
     xmlns:layout="sap.ui.layout"
@@ -17,14 +17,16 @@
                 <customHeader >
                     <Bar id="IDGenBar1" class="professionalHeader">
                         <contentLeft>
-                            <VBox id="_IDGenVBox2">
-                                <Text id="IDGenText01" text="Compensation Fund Management Dashbord"  class="dashboardHeaderText sapUiResponsiveMargin "/>
+                            <VBox id="_IDGenVBox2" justifyContent="Center">
+                               
+                                <Text id="IDGenText01" text="Compensation Fund Management"  class="dashboardHeaderText "/>
+                                <!-- <Text id="IDGenText02" text="Management Dashboard"  class=" sapUiResponsiveMargin "/> -->
                             </VBox>
                         </contentLeft>
 
-                        <contentRight>
+                        <!-- <contentRight>
                             <Button id="IDGenButton1" text="{i18n>logout}" icon="sap-icon://log" class="myCustomSize" tooltip="{i18n>logout}" type="Success" press=".handleLogoutPress"/>
-                        </contentRight>
+                        </contentRight> -->
                     
                     </Bar>
                 </customHeader>
@@ -186,6 +188,8 @@
                     </Toolbar>
                 </customHeader>
                 <content >
+                    <VBox id="_IDGenVBox34"  height="100%" class="sideNavContainer" >
+
                     <List id="myList1" class="professionalSideNav" itemPress=".onItemPress" mode="SingleSelectMaster" showSeparators="None">
                         <items >
                             <StandardListItem id="onListItem000" title="{i18n>item1Dash}" type="Navigation" icon="sap-icon://bbyd-dashboard" class="sideNavItem">
@@ -212,9 +216,20 @@
                                 <customData>
                                     <core:CustomData key="route" value="RouteMain5"/>
                                 </customData>
-                            </StandardListItem>
+                            </StandardListItem>    
                         </items>
                     </List>
+                     <VBox id="_IDGenVBox35"
+                            height="100%"
+                            class="sideNavContainer"
+                            layoutData="{path: ''}"/>
+
+                        <StandardListItem id="onListItemLogout" title="Logout" icon="sap-icon://log" type="Navigation" class="myCustomSize" >
+                            <customData>
+                                <core:CustomData  key="route" value="RouteMain6"/>
+                            </customData>
+                        </StandardListItem>
+                    </VBox>
                 </content>
             </Page>
         </masterPages>

@@ -23,9 +23,9 @@
                         <contentLeft>
                             <Text id="IDGenText4" text="Registered Practices MFP Summary" class="myCustomSize sapUiResponsiveMargin"/>
                         </contentLeft>
-                        <contentRight>
+                        <!-- <contentRight>
                             <Button id="IDGenButton4" text="{i18n>logout}" visible="true" icon="sap-icon://log" type="Success" press=".handleLogoutPress"/>
-                        </contentRight>
+                        </contentRight> -->
                     </Bar>
                 </customHeader>
                
